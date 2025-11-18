@@ -12,7 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vacations">
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.ProductList"
+            android:label="Product List"
+            android:exported="false" />
+        <activity
+            android:name=".UI.MainActivity"
+            android:label="Main Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
