@@ -17,14 +17,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        Button button=findViewById(R.id.button); //button not defined here, but is defined in the video
-        // her MainActivity.Java file is under her UI folder, which I don't have/didn't create
-        // what do I do for the button here??? I don't know where she got this from.
+        Button button=findViewById(R.id.button); // the 'button' here is referring to activity_main.xml, when
+        // i added the button to the phone UI/simulator, under the component tree on the left side of the window.
+        // as soon as I added the button, this error went away.
+
         button.setOnClickListener(new View.OnClickListener(){
 
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { // writing code to move to the next screen when the button is pressed
                 Intent intent = new Intent(MainActivity.this,ProductList.class);
+                intent.putExtra("test", "information sent");
                 startActivity(intent);
             }
         });

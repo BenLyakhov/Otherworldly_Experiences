@@ -26,4 +26,7 @@
         tools:layout_editor_absoluteX="289dp"
         tools:layout_editor_absoluteY="973dp" />
 
+<!--    in video 1, time stamp 1:11:00, she adds a contraint for her airplane art in landscape mode and codes in the constraint so that the
+clip art of the airplane shows up in the landscape view of the window -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

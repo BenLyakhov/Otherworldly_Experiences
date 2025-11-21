@@ -12,13 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vacations">
         <activity
-            android:name=".UI.ProductList"
-            android:label="Product List"
+            android:name=".UI.ProductDetails"
+            android:label="Product Details and Parts List"
             android:exported="false" />
         <activity
+            android:name=".UI.ProductList"
+            android:exported="false"
+            android:label="Product List" />
+        <activity
             android:name=".UI.MainActivity"
-            android:label="Main Activity"
-            android:exported="true">
+            android:exported="true"
+            android:label="Main Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
