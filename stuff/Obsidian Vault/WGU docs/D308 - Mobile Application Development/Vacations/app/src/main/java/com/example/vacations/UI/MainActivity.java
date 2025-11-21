@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button button=findViewById(R.id.button); //button not defined here, but is defined in the video
         // her MainActivity.Java file is under her UI folder, which I don't have/didn't create
+        // what do I do for the button here??? I don't know where she got this from.
         button.setOnClickListener(new View.OnClickListener(){
 
             @Override
