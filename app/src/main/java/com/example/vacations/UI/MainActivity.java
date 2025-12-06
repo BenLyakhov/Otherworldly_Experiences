@@ -39,3 +39,5 @@ public class MainActivity extends AppCompatActivity {
 //        });
     }
 }
+
+// testing laptop setup to work remotely
