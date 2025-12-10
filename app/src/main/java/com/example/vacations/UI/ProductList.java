@@ -2,7 +2,10 @@ package com.example.vacations.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,4 +44,25 @@ public class ProductList extends AppCompatActivity {
             return insets;
         });
     }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_product_list, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        if(item.getItemId()==R.id.mysample){
+            Toast.makeText(ProductList.this,"put in sample data",Toast.LENGTH_LONG).show();
+            return true;
+        }
+        if(item.getItemId()==android.R.id.home){
+            this.finish(); // this part makes the back arrow work to the previous page. can program it to go somewhere else
+//          android.parentActivityName is what you link the back arrow to when on that page, in AndroidManifest
+
+            return true;
+        }
+        return true;
+    }
+
 }

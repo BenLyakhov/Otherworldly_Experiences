@@ -30,11 +30,13 @@
         <activity
             android:name="com.example.vacations.UI.ProductDetails"
             android:exported="false"
-            android:label="Product Details" />
+            android:label="Product Details"
+            android:parentActivityName="com.example.vacations.UI.ProductList" />
         <activity
             android:name="com.example.vacations.UI.ProductList"
             android:exported="false"
-            android:label="Product List" />
+            android:label="Product List"
+            android:parentActivityName="com.example.vacations.UI.MainActivity" />
         <activity
             android:name="com.example.vacations.UI.MainActivity"
             android:exported="true"

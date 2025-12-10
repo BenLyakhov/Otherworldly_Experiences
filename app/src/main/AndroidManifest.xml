@@ -14,10 +14,12 @@
         <activity
             android:name=".UI.ProductDetails"
             android:label="Product Details"
+            android:parentActivityName=".UI.ProductList"
             android:exported="false" />
         <activity
             android:name=".UI.ProductList"
             android:exported="false"
+            android:parentActivityName=".UI.MainActivity"
             android:label="Product List" />
         <activity
             android:name=".UI.MainActivity"
