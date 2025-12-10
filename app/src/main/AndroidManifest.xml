@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Vacations">
         <activity
             android:name=".UI.ProductDetails"
-            android:label="Product Details and Parts List"
+            android:label="Product Details"
             android:exported="false" />
         <activity
             android:name=".UI.ProductList"

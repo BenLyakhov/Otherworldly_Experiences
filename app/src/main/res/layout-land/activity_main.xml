@@ -8,25 +8,38 @@
     tools:context=".UI.MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleX="2"
         android:scaleY="2"
-        android:text="Vacation stuff"
+        android:text="Vacation Testing"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <!--        needs constrainst-->
 
     <Button
         android:id="@+id/button"
-        android:layout_width="112dp"
-        android:layout_height="85dp"
+        android:layout_width="138dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="60dp"
         android:text="Enter"
-        tools:layout_editor_absoluteX="289dp"
-        tools:layout_editor_absoluteY="973dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent" />
 
-<!--    in video 1, time stamp 1:11:00, she adds a contraint for her airplane art in landscape mode and codes in the constraint so that the
-clip art of the airplane shows up in the landscape view of the window -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/baseline_add_24"
+        tools:layout_editor_absoluteX="323dp"
+        tools:layout_editor_absoluteY="170dp" />
+    <!--        needs constrainst-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

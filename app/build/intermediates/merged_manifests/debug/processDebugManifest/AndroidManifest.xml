@@ -28,8 +28,17 @@
         android:testOnly="true"
         android:theme="@style/Theme.Vacations" >
         <activity
-            android:name="com.example.vacations.MainActivity"
-            android:exported="true" >
+            android:name="com.example.vacations.UI.ProductDetails"
+            android:exported="false"
+            android:label="Product Details" />
+        <activity
+            android:name="com.example.vacations.UI.ProductList"
+            android:exported="false"
+            android:label="Product List" />
+        <activity
+            android:name="com.example.vacations.UI.MainActivity"
+            android:exported="true"
+            android:label="Main Activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

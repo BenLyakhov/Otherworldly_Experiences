@@ -40,20 +40,39 @@
                     }
                 },
                 {
-                    "source": "F:\\stuff\\Obsidian Vault\\WGU docs\\D308 - Mobile Application Development\\Vacations\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "D:\\WGU\\WGU docs\\D308 - Mobile Application Development\\Vacations\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "46",
-                        "endOffsets": "58"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,97",
+                        "endColumns": "41,41",
+                        "endOffsets": "92,134"
                     },
                     "to": {
-                        "startLines": "2433",
-                        "startColumns": "4",
-                        "startOffsets": "163062",
-                        "endColumns": "46",
-                        "endOffsets": "163104"
+                        "startLines": "714,1181",
+                        "startColumns": "4,4",
+                        "startOffsets": "37679,70249",
+                        "endColumns": "41,41",
+                        "endOffsets": "37716,70286"
+                    }
+                },
+                {
+                    "source": "D:\\WGU\\WGU docs\\D308 - Mobile Application Development\\Vacations\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "100,312",
+                        "endLines": "5,7",
+                        "endColumns": "12,66",
+                        "endOffsets": "306,374"
+                    },
+                    "to": {
+                        "startLines": "3007,7554",
+                        "startColumns": "4,4",
+                        "startOffsets": "212166,538097",
+                        "endLines": "3010,7554",
+                        "endColumns": "12,65",
+                        "endOffsets": "212266,538158"
                     }
                 },
                 {
@@ -184,6 +203,23 @@
                     }
                 },
                 {
+                    "source": "D:\\WGU\\WGU docs\\D308 - Mobile Application Development\\Vacations\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "46",
+                        "endOffsets": "58"
+                    },
+                    "to": {
+                        "startLines": "2433",
+                        "startColumns": "4",
+                        "startOffsets": "163062",
+                        "endColumns": "46",
+                        "endOffsets": "163104"
+                    }
+                },
+                {
                     "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\2dc25f76835ba6926cdbbbca465a5220\\transformed\\recyclerview-1.2.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
@@ -200,23 +236,6 @@
                         "endLines": "553,1328,1329,1330,1338,1339,1340,2258,14237",
                         "endColumns": "55,58,47,55,74,75,71,65,24",
                         "endOffsets": "28564,80024,80072,80128,80814,80890,80962,152308,879829"
-                    }
-                },
-                {
-                    "source": "F:\\stuff\\Obsidian Vault\\WGU docs\\D308 - Mobile Application Development\\Vacations\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,97",
-                        "endColumns": "41,41",
-                        "endOffsets": "92,134"
-                    },
-                    "to": {
-                        "startLines": "714,1181",
-                        "startColumns": "4,4",
-                        "startOffsets": "37679,70249",
-                        "endColumns": "41,41",
-                        "endOffsets": "37716,70286"
                     }
                 },
                 {
@@ -310,25 +329,6 @@
                         "startOffsets": "155909",
                         "endColumns": "49",
                         "endOffsets": "155954"
-                    }
-                },
-                {
-                    "source": "F:\\stuff\\Obsidian Vault\\WGU docs\\D308 - Mobile Application Development\\Vacations\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "2,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,312",
-                        "endLines": "5,7",
-                        "endColumns": "12,66",
-                        "endOffsets": "306,374"
-                    },
-                    "to": {
-                        "startLines": "3007,7554",
-                        "startColumns": "4,4",
-                        "startOffsets": "212166,538097",
-                        "endLines": "3010,7554",
-                        "endColumns": "12,65",
-                        "endOffsets": "212266,538158"
                     }
                 },
                 {
