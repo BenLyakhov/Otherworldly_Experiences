@@ -1,0 +1,25 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable baseline_add_24
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id button
+id floatingActionButton
+id imageView
+id item
+id main
+id mysample
+id textView
+layout activity_main
+layout activity_product_details
+layout activity_product_list
+menu menu_product_list
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Vacations
+style Theme.Vacations
+xml backup_rules
+xml data_extraction_rules
