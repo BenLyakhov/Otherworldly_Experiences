@@ -3859,6 +3859,7 @@ id fixed
 id flip
 id floating
 id floatingActionButton
+id floatingActionButton2
 id forever
 id fragment_container_view_tag
 id frost
@@ -4300,9 +4301,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_excursion_details
 layout activity_main
-layout activity_product_details
-layout activity_product_list
+layout activity_vacation_details
+layout activity_vacation_list
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

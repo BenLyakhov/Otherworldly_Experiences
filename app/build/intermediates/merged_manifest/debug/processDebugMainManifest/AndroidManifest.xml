@@ -28,14 +28,19 @@
         android:testOnly="true"
         android:theme="@style/Theme.Vacations" >
         <activity
-            android:name="com.example.vacations.UI.ProductDetails"
+            android:name="com.example.vacations.UI.ExcursionDetails"
             android:exported="false"
-            android:label="Product Details"
-            android:parentActivityName="com.example.vacations.UI.ProductList" />
+            android:label="Excursion Details"
+            android:parentActivityName="com.example.vacations.UI.VacationDetails" />
         <activity
-            android:name="com.example.vacations.UI.ProductList"
+            android:name="com.example.vacations.UI.VacationDetails"
             android:exported="false"
-            android:label="Product List"
+            android:label="Vacation Details"
+            android:parentActivityName="com.example.vacations.UI.VacationList" />
+        <activity
+            android:name="com.example.vacations.UI.VacationList"
+            android:exported="false"
+            android:label="Vacation List"
             android:parentActivityName="com.example.vacations.UI.MainActivity" />
         <activity
             android:name="com.example.vacations.UI.MainActivity"

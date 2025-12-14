@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) { // writing code to move to the next screen when the button is pressed
-                Intent intent = new Intent(MainActivity.this,ProductList.class);
+                Intent intent = new Intent(MainActivity.this, VacationList.class);
                 intent.putExtra("test", "information sent");
                 startActivity(intent);
             }

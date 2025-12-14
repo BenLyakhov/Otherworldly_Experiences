@@ -12,15 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vacations">
         <activity
-            android:name=".UI.ProductDetails"
-            android:label="Product Details"
-            android:parentActivityName=".UI.ProductList"
+            android:name=".UI.ExcursionDetails"
+            android:label="Excursion Details"
+            android:parentActivityName=".UI.VacationDetails"
             android:exported="false" />
         <activity
-            android:name=".UI.ProductList"
+            android:name=".UI.VacationDetails"
             android:exported="false"
-            android:parentActivityName=".UI.MainActivity"
-            android:label="Product List" />
+            android:label="Vacation Details"
+            android:parentActivityName=".UI.VacationList" />
+        <activity
+            android:name=".UI.VacationList"
+            android:exported="false"
+            android:label="Vacation List"
+            android:parentActivityName=".UI.MainActivity" />
         <activity
             android:name=".UI.MainActivity"
             android:exported="true"
