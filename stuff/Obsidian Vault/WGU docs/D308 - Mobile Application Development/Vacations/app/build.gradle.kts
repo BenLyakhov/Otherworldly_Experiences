@@ -1,3 +1,7 @@
+import org.gradle.kotlin.dsl.androidTestImplementation
+import org.gradle.kotlin.dsl.annotationProcessor
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.android.application)
 }
@@ -41,4 +45,17 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+//    Room Components
+//    These below are not working/not recognized in the current versions of the IDE.
+//    after these should be the correct ones that I got from reddit page for D308
+
+//    WRONG (what is in video 2 in panopto):
+//    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+//    annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
+//    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+
+//    CORRECT (From reddit):
+    implementation("androidx.room:room-runtime:${rootProject.extra.get("roomVersion")}")
+    annotationProcessor("androidx.room:room-compiler:${rootProject.extra.get("roomVersion")}")
+    androidTestImplementation("androidx.room:room-testing:${rootProject.extra.get("roomVersion")}")
 }
