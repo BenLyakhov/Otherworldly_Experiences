@@ -24,6 +24,10 @@
         "source": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-main-36:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
+        "merged": "com.example.vacations.app-debug-34:/layout_activity_product_details.xml.flat",
+        "source": "com.example.vacations.app-main-36:/layout/activity_product_details.xml"
+    },
+    {
         "merged": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-debug-34:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-main-36:\\xml\\data_extraction_rules.xml"
     },
@@ -72,20 +76,16 @@
         "source": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-main-36:\\layout\\activity_product_list.xml"
     },
     {
-        "merged": "com.example.vacations.app-debug-34:/menu_menu_product_list.xml.flat",
-        "source": "com.example.vacations.app-main-36:/menu/menu_product_list.xml"
-    },
-    {
         "merged": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-debug-34:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-main-36:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-debug-34:\\menu_menu_product_list.xml.flat",
-        "source": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-main-36:\\menu\\menu_product_list.xml"
-    },
-    {
         "merged": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-debug-34:\\mipmap-anydpi_ic_launcher.xml.flat",
         "source": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-main-36:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-debug-34:\\menu_menu_product_list.xml.flat",
+        "source": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-main-36:\\menu\\menu_product_list.xml"
     },
     {
         "merged": "C:\\Users\\BLyak\\.gradle\\daemon\\8.13\\com.example.vacations.app-debug-34:\\mipmap-anydpi_ic_launcher_round.xml.flat",

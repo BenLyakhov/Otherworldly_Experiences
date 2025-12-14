@@ -11,7 +11,10 @@ id imageView
 id item
 id main
 id mysample
+id textVie4
 id textView
+id textView2
+id textView3
 layout activity_main
 layout activity_product_details
 layout activity_product_list
