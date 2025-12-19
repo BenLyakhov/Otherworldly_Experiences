@@ -12,12 +12,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.vacations.R;
 import com.example.vacations.database.Repository;
 import com.example.vacations.entities.Excursion;
 import com.example.vacations.entities.Vacation;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.List;
 
 public class VacationList extends AppCompatActivity {
     private Repository repository;
@@ -39,7 +43,16 @@ public class VacationList extends AppCompatActivity {
             }
         });
 
-        System.out.println(getIntent().getStringExtra("test")); // this line makes the button work
+        RecyclerView recyclerView=findViewById(R.id.recyclerView);
+        repository=new Repository(getApplication());
+        List<Vacation> allVacations=repository.getmAllVacations();
+        final VacationAdapter vacationAdapter=new VacationAdapter(this);
+        recyclerView.setAdapter(vacationAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        vacationAdapter.setVacations(allVacations); // this line is from VacationAdapter.java, line 81
+
+//        System.out.println(getIntent().getStringExtra("test")); // this line makes the button work
+//        Commented out the above system.out line when I put in the recycler view (see video 3, at 51:56)
         // the button which was added in MainActivity.java, lines 20 to 31, which is the button added in the activity_main.xml UI/simulator
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

@@ -41,6 +41,9 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
                     int position=getAbsoluteAdapterPosition();
                     final Vacation current=mVacations.get(position);
                     Intent intent=new Intent(context,VacationDetails.class);
+                    intent.putExtra("id", current.getVacationID());
+                    intent.putExtra("name", current.getVacationName());
+                    intent.putExtra("price", current.getPrice());
                 }
             });
         }
@@ -56,7 +59,13 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
 
     @Override
     public void onBindViewHolder(@NonNull VacationAdapter.VacationViewHolder holder, int position) {
-
+        if(mVacations!=null){
+            Vacation current=mVacations.get(position);
+            String name= current.getVacationName();
+            holder.vacationItemView.setText(name);
+        } else {
+            holder.vacationItemView.setText("No Vacation name");
+        }
     }
 
     @Override
