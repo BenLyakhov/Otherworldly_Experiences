@@ -43,13 +43,13 @@ public class VacationList extends AppCompatActivity {
             }
         });
 
-        RecyclerView recyclerView=findViewById(R.id.recyclerView);
+        RecyclerView recyclerView=findViewById(R.id.recyclerView); //video 3, time stamp 52:04
         repository=new Repository(getApplication());
         List<Vacation> allVacations=repository.getmAllVacations();
-        final VacationAdapter vacationAdapter=new VacationAdapter(this);
+        final VacationAdapter vacationAdapter=new VacationAdapter(this); //java class VacationAdapter linked here
         recyclerView.setAdapter(vacationAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        vacationAdapter.setVacations(allVacations); // this line is from VacationAdapter.java, line 81
+        vacationAdapter.setVacations(allVacations); // this line is from VacationAdapter.java, line 85
 
 //        System.out.println(getIntent().getStringExtra("test")); // this line makes the button work
 //        Commented out the above system.out line when I put in the recycler view (see video 3, at 51:56)

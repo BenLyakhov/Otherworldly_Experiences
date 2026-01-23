@@ -35,15 +35,17 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//              Panopto video 3 has getAdapterPosition(). This is depreciated in my current version of Android studio.
+//              Panopto video 3 has getAdapterPosition(). (time marker 40:20) This is depreciated in my current version of Android studio.
 //              I will try instead to use what was suggested by the IDE, getAbsoluteAdapterPosition();
 //              if this doesn't work, try the other suggestion, getBindingAdapterPosition();
-                    int position=getAbsoluteAdapterPosition();
+//                    int position=getAbsoluteAdapterPosition();
+                    int position=getBindingAdapterPosition();
                     final Vacation current=mVacations.get(position);
                     Intent intent=new Intent(context,VacationDetails.class);
                     intent.putExtra("id", current.getVacationID());
                     intent.putExtra("name", current.getVacationName());
                     intent.putExtra("price", current.getPrice());
+                    context.startActivity(intent); // 1/22/26: I was missing this line. maybe it'll work now
                 }
             });
         }
@@ -58,6 +60,8 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
     }
 
     @Override
+//    onBindViewHolder is what we display on the recyclerview. The recyclerview is an element in the android app that displays the list of items that you
+//    want to show
     public void onBindViewHolder(@NonNull VacationAdapter.VacationViewHolder holder, int position) {
         if(mVacations!=null){
             Vacation current=mVacations.get(position);
@@ -70,7 +74,7 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
 
     @Override
     public int getItemCount() {
-//        return 0; // dangerous
+//        return 0; // default, dangerous
 //        instead want to return the number of products (vacations) you have.
         if (mVacations!=null){
             return mVacations.size();
