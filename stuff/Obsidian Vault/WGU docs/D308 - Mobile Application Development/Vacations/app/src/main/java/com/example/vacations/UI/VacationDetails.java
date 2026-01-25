@@ -17,8 +17,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.vacations.R;
 import com.example.vacations.database.Repository;
+import com.example.vacations.entities.Excursion;
 import com.example.vacations.entities.Vacation;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class VacationDetails extends AppCompatActivity {
 
@@ -65,7 +69,15 @@ public class VacationDetails extends AppCompatActivity {
         final ExcursionAdapter excursionAdapter = new ExcursionAdapter(this);
         recyclerView.setAdapter(excursionAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        excursionAdapter.setExcursions(repository.getmAllExcursions());
+
+//      The following code is for filtering the vacations based on the excursions their IDs point to
+        List<Excursion> filteredExcursions = new ArrayList<>();
+        for (Excursion e : repository.getmAllExcursions()) {
+            if (e.getVacationID() == vacationID) filteredExcursions.add(e);
+        }
+//        excursionAdapter.setExcursions(repository.getmAllExcursions()); //send all excursions to the recycler view.
+        excursionAdapter.setExcursions(filteredExcursions);
+//      using the filtered for loop above, you can also send the filtered parts to the recycler view, as opposed to all of them.
         }
 
         public boolean onCreateOptionsMenu(Menu menu) {
@@ -83,10 +95,12 @@ public class VacationDetails extends AppCompatActivity {
 //          because coding is 0 based, and then add one to insert the new vacation at the end of the list
                     vacation = new Vacation(vacationID, editName.getText().toString(), Double.parseDouble((editPrice.getText().toString())));
                     repository.insert(vacation);
+                    this.finish(); // goes back to the list screen
                 }
                 else { // this else statement is for if you are modifying a vacation (time stamp video 3, 1:29:40)
                     vacation = new Vacation(vacationID, editName.getText().toString(), Double.parseDouble((editPrice.getText().toString())));
                     repository.update(vacation);
+                    this.finish();
                 }
             }
             return true;
