@@ -7,11 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -81,7 +77,7 @@ public class VacationDetails extends AppCompatActivity {
         }
 
         public boolean onCreateOptionsMenu(Menu menu) {
-            getMenuInflater().inflate(R.menu.menu_excursiondetails, menu);
+            getMenuInflater().inflate(R.menu.menu_vacationdetails, menu);
             return true;
         }
 
@@ -105,6 +101,19 @@ public class VacationDetails extends AppCompatActivity {
             }
             return true;
         }
+
+//        The following is the code found in VacationList.java. per video 4, this is supposed to be in
+//    VacationDetail.java. I'll leave it in both areas for now, see if it breaks anything.
+    @Override
+    protected void onResume() {
+        super.onResume();
+        List<Vacation> allVacations = repository.getmAllVacations();
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        final VacationAdapter vacationAdapter = new VacationAdapter(this);
+        recyclerView.setAdapter(vacationAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        vacationAdapter.setVacations(allVacations);
+    }
 
     }
 
