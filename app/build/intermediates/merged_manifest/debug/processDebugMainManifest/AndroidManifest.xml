@@ -35,7 +35,7 @@
         <activity
             android:name="com.example.vacations.UI.VacationDetails"
             android:exported="false"
-            android:label="Vacation Details"
+            android:label="Vacation Details and Excursion List"
             android:parentActivityName="com.example.vacations.UI.VacationList" />
         <activity
             android:name="com.example.vacations.UI.VacationList"
@@ -52,6 +52,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

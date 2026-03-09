@@ -3798,6 +3798,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id date
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3842,6 +3843,10 @@ id enterAlways
 id enterAlwaysCollapsed
 id entireSpace
 id escape
+id excursionName
+id excursionPrice
+id excursionRecyclerView
+id excursionsave
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3894,6 +3899,7 @@ id indeterminate
 id info
 id invisible
 id inward
+id is_pooling_container_tag
 id italic
 id item
 id item_touch_helper_previous_elevation
@@ -3988,9 +3994,11 @@ id noState
 id none
 id normal
 id north
+id note
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id notify
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -4026,14 +4034,18 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
+id price
+id priceText
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerView
 id report_drawn
 id retreat
 id reverseSawtooth
@@ -4066,6 +4078,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id share
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -4083,6 +4096,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinner
 id spline
 id split_action_bar
 id spread
@@ -4126,10 +4140,10 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textVie4
 id textView
-id textView2
-id textView3
+id textView4
+id textView5
+id textView6
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -4142,6 +4156,7 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id titleText
 id title_template
 id toggle
 id top
@@ -4164,6 +4179,9 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id vacation
+id vacationdelete
+id vacationsave
 id vertical
 id vertical_only
 id view_offset_helper
@@ -4321,6 +4339,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout excursion_list_item
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog
@@ -4386,7 +4405,10 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-menu menu_product_list
+layout vacation_list_item
+menu menu_excursiondetails
+menu menu_vacation_list
+menu menu_vacationdetails
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

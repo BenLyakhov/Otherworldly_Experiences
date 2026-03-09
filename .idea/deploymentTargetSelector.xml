@@ -2,12 +2,12 @@
 <project version="4">
   <component name="deploymentTargetSelector">
     <selectionStates>
-      <SelectionState runConfigName="app">
+      <SelectionState runConfigName="Vacation">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-12-06T02:47:05.523619100Z">
+        <DropdownSelection timestamp="2026-03-03T04:12:58.183505600Z">
           <Target type="DEFAULT_BOOT">
             <template>
-              <DeviceId pluginId="FirebaseDirectAccess" type="TEMPLATE" identifier="model_id=OP535DL1/34" />
+              <DeviceId pluginId="FirebaseDirectAccess" type="TEMPLATE" identifier="model_id=a05s/35" />
             </template>
           </Target>
         </DropdownSelection>
