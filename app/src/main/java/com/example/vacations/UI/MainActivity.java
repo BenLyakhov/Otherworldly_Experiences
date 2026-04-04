@@ -12,6 +12,16 @@ import com.example.vacations.R;
 
 public class MainActivity extends AppCompatActivity {
 
+//  from video 4, time stamp 52:06, creating numAlert for ExcursionDetails.java, line 176
+//  this is to create a notification/calendar alert
+
+public static int numAlert; // starts at 0
+
+//  The assignment calls for alerts for both the vacations and excursions
+//  You don't need numAlertVaca and numAlertExcur because the numAlert needs to be a different number, regardless of the
+//    class. meaning, if numAlertVaca and numAlertExcur are both 1, it will cause problems.
+//    setting numAlert and incrementing it by one regardless of which class uses it works just fine.
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

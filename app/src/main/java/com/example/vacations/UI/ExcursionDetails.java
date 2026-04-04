@@ -15,14 +15,10 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.vacations.R;
 import com.example.vacations.database.Repository;
 import com.example.vacations.entities.Excursion;
-import com.example.vacations.entities.Vacation;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -71,16 +67,28 @@ public class ExcursionDetails extends AppCompatActivity {
         editNote = findViewById(R.id.note);
         editDate = findViewById(R.id.date);
 
-        String myFormat = "mm/dd/yy";
+//  4/3/26 adding datepicker dialogue, video 4, starting 24:27
+
+        startDate = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                myCalendarStart.set(Calendar.YEAR, year);
+                myCalendarStart.set(Calendar.MONTH, month);
+                myCalendarStart.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabelStart();
+            }
+        };
+
+        String myFormat = "MM/dd/yy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
-//        from video 4, timestamp 24:15:
+//        from video 4, timestamp starting 24:15:
         editDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Date date;
                 String info = editDate.getText().toString();
-                if (info.equals("")) info="01/01/00"; // setting default date to 01/01/00
+                if (info.equals("")) info="01/01/26"; // setting default date to 01/01/00
                 try {
                     myCalendarStart.setTime(sdf.parse(info));//sdf = date formater
                 } catch (ParseException e) {
@@ -95,15 +103,7 @@ public class ExcursionDetails extends AppCompatActivity {
             }
         });
 
-        startDate = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                myCalendarStart.set(Calendar.YEAR, year);
-                myCalendarStart.set(Calendar.MONTH, month);
-                myCalendarStart.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                updateLabelStart();
-            }
-        };
+
     }
 
 
@@ -112,7 +112,7 @@ public class ExcursionDetails extends AppCompatActivity {
 //    for ExcursionDetails here
 
     private void updateLabelStart() {
-        String myFormat = "mm/dd/yy"; //In which you need put here
+        String myFormat = "MM/dd/yy"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
         editDate.setText(sdf.format(myCalendarStart.getTime()));
@@ -156,7 +156,7 @@ public class ExcursionDetails extends AppCompatActivity {
         }
         if (item.getItemId() == R.id.notify) {
             String dateFromScreen = editDate.getText().toString();
-            String myFormat = "MM/dd/yy"; //In which you need put here
+            String myFormat = "MM/dd/yy";
             SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
             Date myDate = null;
             try {
@@ -165,15 +165,16 @@ public class ExcursionDetails extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-//          Not sure what numAlert is, commenting out this code for now
 
-//            Long trigger = myDate.getTime();
-//            Intent intent = new Intent(ExcursionDetails.this, MyReceiver.class); //need to create new java class in UI folder with this name MyReceiver
-//            intent.putExtra("key", "message I want to see");
-//            PendingIntent sender=PendingIntent.getBroadcast(ExcursionDetails.this,++MainActivity.numAlert, intent,PendingIntent.FLAG_IMMUTABLE);
-//            AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-//            alarmManager.set(AlarmManager.RTC_WAKEUP, trigger,sender);
-//            return true;
+            Long trigger = myDate.getTime();
+            Intent intent = new Intent(ExcursionDetails.this, MyReceiver.class); //need to create new java class in UI folder with this name MyReceiver
+            intent.putExtra("key", "message I want to see");
+            PendingIntent sender=PendingIntent.getBroadcast(ExcursionDetails.this,++MainActivity.numAlert, intent,PendingIntent.FLAG_IMMUTABLE);
+
+//          The following code is to basically wake the phone/app up to a set date and time in the future (trigger, sender)
+            AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            alarmManager.set(AlarmManager.RTC_WAKEUP, trigger,sender);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
