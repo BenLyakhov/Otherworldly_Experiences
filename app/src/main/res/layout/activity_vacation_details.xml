@@ -81,7 +81,6 @@
         android:id="@+id/excursionRecyclerView"
         android:layout_width="409dp"
         android:layout_height="470dp"
-        android:background="#ED7C7C"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView" />
 

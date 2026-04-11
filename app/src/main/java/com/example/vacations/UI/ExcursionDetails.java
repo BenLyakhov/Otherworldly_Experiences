@@ -9,8 +9,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -19,9 +21,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.vacations.R;
 import com.example.vacations.database.Repository;
 import com.example.vacations.entities.Excursion;
+import com.example.vacations.entities.Vacation;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -79,6 +83,13 @@ public class ExcursionDetails extends AppCompatActivity {
             }
         };
 
+//   video 4, timestamp 1:31:49, spinner
+        Spinner spinner=findViewById(R.id.spinner);
+        ArrayList<Vacation> vacationArrayList=new ArrayList<>();
+        vacationArrayList.addAll(repository.getmAllVacations());
+        ArrayAdapter<Vacation>vacationAdapter=new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,vacationArrayList);
+        spinner.setAdapter(vacationAdapter);
+
         String myFormat = "MM/dd/yy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
@@ -105,7 +116,6 @@ public class ExcursionDetails extends AppCompatActivity {
 
 
     }
-
 
 //    The following is stuff I added, copying her live flamingo code, because she doesnt go over this stuff in her videos
 //    This stuff is basically copying what she went over in VacationDetails.java, but modifying them

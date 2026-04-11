@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -28,9 +29,9 @@ public class VacationDetails extends AppCompatActivity {
     EditText editName;
     EditText editPrice;
     Repository repository;
-
+    Vacation currentVacation;
     RecyclerView recyclerView;
-
+    int numExcursions;
 //    When adding any new empty view activity to the UI folder, don't forget to include the label (name) in the AndroidManifest.xml file
 
     @Override
@@ -78,7 +79,7 @@ public class VacationDetails extends AppCompatActivity {
 //      using the filtered for loop above, you can also send the filtered parts to the recycler view, as opposed to all of them.
         }
 
-        public boolean onCreateOptionsMenu(Menu menu) {
+        public boolean onCreateOptionsMenu(Menu menu) { // I think inflate means add on top of the activity
             getMenuInflater().inflate(R.menu.menu_vacationdetails, menu);
             return true;
         }
@@ -99,6 +100,27 @@ public class VacationDetails extends AppCompatActivity {
                     vacation = new Vacation(vacationID, editName.getText().toString(), Double.parseDouble((editPrice.getText().toString())));
                     repository.update(vacation);
                     this.finish();
+                }
+            }
+// video 4, 1:17:14, adding the delete vacation function
+            if(item.getItemId()==R.id.vacationdelete){
+                for (Vacation vaca:repository.getmAllVacations()){
+                    if(vaca.getVacationID()==vacationID)currentVacation=vaca;
+                }
+                numExcursions = 0;
+//                the following for loop checks to see if there are any excursions associated with the vacation before deleting it
+                for(Excursion excursion:repository.getmAllExcursions()){
+                    if(excursion.getExcursionID()==vacationID)++numExcursions; //increment = counter. If there are excursions
+                }
+
+//                after the above for loop, if there are still no excursions attached, delete the vacation.
+                if(numExcursions==0) {
+                    repository.delete(currentVacation);
+                    Toast.makeText(VacationDetails.this, currentVacation.getVacationName() + " was deleted", Toast.LENGTH_LONG).show();
+                    VacationDetails.this.finish(); // if delete was successful, go back to the main screen
+                }
+                else {
+                    Toast.makeText(VacationDetails.this, "Can't delete a vacation with excursions", Toast.LENGTH_LONG).show();
                 }
             }
             return true;

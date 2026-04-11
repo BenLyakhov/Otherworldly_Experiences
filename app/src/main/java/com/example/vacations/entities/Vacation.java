@@ -14,6 +14,7 @@ public class Vacation {
     public int getVacationID() {
         return vacationID;
     }
+    public String toString(){return vacationName; } // this line is for the spinner, timestamp 1:40:06 in video 4
 
     public void setVacationID(int vacationID) {
         this.vacationID = vacationID;

@@ -4,11 +4,11 @@
     <selectionStates>
       <SelectionState runConfigName="Vacation">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-03-03T04:12:58.183505600Z">
+        <DropdownSelection timestamp="2026-03-26T03:43:46.237510700Z">
           <Target type="DEFAULT_BOOT">
-            <template>
-              <DeviceId pluginId="FirebaseDirectAccess" type="TEMPLATE" identifier="model_id=a05s/35" />
-            </template>
+            <handle>
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\BLyak\.android\avd\Pixel_9a.avd" />
+            </handle>
           </Target>
         </DropdownSelection>
         <DialogSelection />
