@@ -14,6 +14,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +42,7 @@ public class ExcursionDetails extends AppCompatActivity {
     EditText editNote;
     TextView editDate;
     Repository repository;
+    Excursion currentExcursion;
     // Datepickerdialog from video 4, timestamp 23:20
     DatePickerDialog.OnDateSetListener startDate;
     final Calendar myCalendarStart = Calendar.getInstance();
@@ -152,8 +154,20 @@ public class ExcursionDetails extends AppCompatActivity {
                 excursion = new Excursion(excusionID, editName.getText().toString(), Double.parseDouble(editPrice.getText().toString()), excusionID);
                 repository.update(excursion);
             }
+            this.finish();
             return true;
         }
+
+        //        adding option to delete excursions
+        if(item.getItemId()==R.id.excursiondelete){
+            for (Excursion excur:repository.getmAllExcursions()){
+                if(excur.getExcursionID()==excusionID)currentExcursion=excur;
+            }
+            repository.delete(currentExcursion);
+            Toast.makeText(ExcursionDetails.this, currentExcursion.getExcursionName() + " was deleted", Toast.LENGTH_LONG).show();
+            ExcursionDetails.this.finish(); // if delete was successful, go back to the main screen
+        }
+
         if (item.getItemId() == R.id.share) {
             Intent sentIntent= new Intent();
             sentIntent.setAction(Intent.ACTION_SEND);
@@ -186,6 +200,7 @@ public class ExcursionDetails extends AppCompatActivity {
             alarmManager.set(AlarmManager.RTC_WAKEUP, trigger,sender);
             return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 }

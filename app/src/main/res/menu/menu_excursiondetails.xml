@@ -4,7 +4,9 @@
 
     <item android:title="Save Excursion"
         android:id="@+id/excursionsave"/>
-    <item android:title="Share Note"
+    <item android:title="Delete Excursion"
+        android:id="@+id/excursiondelete"/>
+    <item android:title="Share Details"
         android:id="@+id/share"/>
     <item android:title="Notify"
         android:id="@+id/notify"/>
