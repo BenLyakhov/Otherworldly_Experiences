@@ -78,7 +78,7 @@
                 android:text="Date" />
 
             <TextView
-                android:id="@+id/date"
+                android:id="@+id/excursionDate"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:hint="select date"

@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +29,8 @@ public class VacationDetails extends AppCompatActivity {
     int vacationID;
     EditText editName;
     EditText editPrice;
+    TextView startDate;
+    TextView endDate;
     Repository repository;
     Vacation currentVacation;
     RecyclerView recyclerView;
@@ -47,6 +50,8 @@ public class VacationDetails extends AppCompatActivity {
 
             editName=findViewById(R.id.titleText);
             editPrice=findViewById(R.id.priceText);
+            startDate=findViewById(R.id.vacaStartDate);
+            endDate=findViewById(R.id.vacaEndDate);
             vacationID = getIntent().getIntExtra("id", -1);
             name = getIntent().getStringExtra("name");
             price = getIntent().getDoubleExtra("price",0.0);
@@ -57,6 +62,7 @@ public class VacationDetails extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(VacationDetails.this, ExcursionDetails.class);
+//                    need to pass vacationID here in the intent
                     startActivity(intent);
 
                 }
@@ -64,18 +70,18 @@ public class VacationDetails extends AppCompatActivity {
             });
 //            return insets;
         recyclerView=findViewById(R.id.excursionRecyclerView);
-//        repository = new Repository(getApplication());
-//        final ExcursionAdapter excursionAdapter = new ExcursionAdapter(this);
-//        recyclerView.setAdapter(excursionAdapter);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//
-////      The following code is for filtering the vacations based on the excursions their IDs point to
-//        List<Excursion> filteredExcursions = new ArrayList<>();
-//        for (Excursion e : repository.getmAllExcursions()) {
-//            if (e.getVacationID() == vacationID) filteredExcursions.add(e);
-//        }
-////        excursionAdapter.setExcursions(repository.getmAllExcursions()); //send all excursions to the recycler view.
-//        excursionAdapter.setExcursions(filteredExcursions);
+        repository = new Repository(getApplication());
+        final ExcursionAdapter excursionAdapter = new ExcursionAdapter(this);
+        recyclerView.setAdapter(excursionAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+//      The following code is for filtering the vacations based on the excursions their IDs point to
+        List<Excursion> filteredExcursions = new ArrayList<>();
+        for (Excursion e : repository.getmAllExcursions()) {
+            if (e.getVacationID() == vacationID) filteredExcursions.add(e);
+        }
+//        excursionAdapter.setExcursions(repository.getmAllExcursions()); //send all excursions to the recycler view.
+        excursionAdapter.setExcursions(filteredExcursions);
 //      using the filtered for loop above, you can also send the filtered parts to the recycler view, as opposed to all of them.
         }
 
@@ -88,19 +94,30 @@ public class VacationDetails extends AppCompatActivity {
             if(item.getItemId()==R.id.vacationsave){
                 Vacation vacation;
                 if (vacationID==-1){
-                    if (repository.getmAllVacations().size() == 0) vacationID = 1;
-                    else vacationID = repository.getmAllVacations().get(repository.getmAllVacations().size() - 1).getVacationID() +1;
-//          The above else statement is saying if the repository (ie, list of all vacations) is not 0, get the list, count its size, -1
-//          because coding is 0 based, and then add one to insert the new vacation at the end of the list
-                    vacation = new Vacation(vacationID, editName.getText().toString(), Double.parseDouble((editPrice.getText().toString())));
+                    vacationID = 0;
+                }
+                vacation = new Vacation(vacationID,
+                        editName.getText().toString(),
+                        Double.parseDouble((editPrice.getText().toString())));
+
+                if (vacationID == 0) {
                     repository.insert(vacation);
-                    this.finish(); // goes back to the list screen
-                }
-                else { // this else statement is for if you are modifying a vacation (time stamp video 3, 1:29:40)
-                    vacation = new Vacation(vacationID, editName.getText().toString(), Double.parseDouble((editPrice.getText().toString())));
+                } else {
                     repository.update(vacation);
-                    this.finish();
                 }
+//                    if (repository.getmAllVacations().size() == 0) vacationID = 1;
+//                    else vacationID = repository.getmAllVacations().get(repository.getmAllVacations().size() - 1).getVacationID() +1;
+////          The above else statement is saying if the repository (ie, list of all vacations) is not 0, get the list, count its size, -1
+////          because coding is 0 based, and then add one to insert the new vacation at the end of the list
+//                    vacation = new Vacation(vacationID, editName.getText().toString(), Double.parseDouble((editPrice.getText().toString())));
+//                    repository.insert(vacation);
+//                    this.finish(); // goes back to the list screen
+//                }
+//                else { // this else statement is for if you are modifying a vacation (time stamp video 3, 1:29:40)
+//                    vacation = new Vacation(vacationID, editName.getText().toString(), Double.parseDouble((editPrice.getText().toString())));
+//                    repository.update(vacation);
+//                    this.finish();
+//                }
             }
 // video 4, 1:17:14, adding the delete vacation function
             if(item.getItemId()==R.id.vacationdelete){

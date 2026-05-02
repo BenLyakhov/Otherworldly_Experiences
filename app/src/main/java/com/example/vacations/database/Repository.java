@@ -92,15 +92,15 @@ public List<Excursion>getmAllExcursions(){
 }
 
 // Associated Excursions List
-public List<Excursion>getmAssociatedExcursions(int vacationID){
+public List<Excursion>getAssociatedExcursions(int vacationID){
     databaseExecutor.execute(()-> {
         mAllExcursions=mExcursionDAO.getAssociatedExcursions(vacationID);
     });
     try {
         Thread.sleep(1000);
     } catch (InterruptedException e) {
-        throw new RuntimeException(e);
-//            e.printStackTrace();
+//        throw new RuntimeException(e);
+            e.printStackTrace();
     }
     return mAllExcursions;
 }
@@ -111,8 +111,8 @@ public List<Excursion>getmAssociatedExcursions(int vacationID){
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-//            e.printStackTrace();
+//            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
     public void delete(Excursion excursion) {
@@ -122,8 +122,8 @@ public List<Excursion>getmAssociatedExcursions(int vacationID){
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-//            e.printStackTrace();
+//            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -134,8 +134,12 @@ public List<Excursion>getmAssociatedExcursions(int vacationID){
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-//            e.printStackTrace();
+//            throw new RuntimeException(e);
+            e.printStackTrace();
         }
+    }
+
+    public Excursion getExcursionByID(int excursionID) {
+        return mExcursionDAO.getExcursionByID(excursionID);
     }
 }

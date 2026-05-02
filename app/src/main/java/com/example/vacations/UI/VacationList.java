@@ -90,18 +90,30 @@ public class VacationList extends AppCompatActivity {
 //          once you click on the three dots in the vacation list page, the database will pop up in android studio
 
 
+//              Below is 4 arg contructor
+//                Vacation vacation = new Vacation(0, "Bahamas", 100.0);
+//                repository.insert(vacation);
+//                vacation = new Vacation(0, "Bali", 200.0);
+//                repository.insert(vacation);
+//                vacation = new Vacation(0, "Japan", 200.0); // initializing one vacation without excursions attached
+//                Excursion excursion = new Excursion(0, "Scuba Diving", 250.0, 1, );
+//                repository.insert(excursion);
+//                excursion = new Excursion(0, "wake boarding", 150.0, 1);
+//                repository.insert(excursion);
 
+//            5 arg constructor for excursion testing
                 Vacation vacation = new Vacation(0, "Bahamas", 100.0);
                 repository.insert(vacation);
                 vacation = new Vacation(0, "Bali", 200.0);
                 repository.insert(vacation);
                 vacation = new Vacation(0, "Japan", 200.0); // initializing one vacation without excursions attached
-                Excursion excursion = new Excursion(0, "Scuba Diving", 250.0, 1);
+                Excursion excursion = new Excursion(0, "Scuba Diving", 250.0, 1, "01/01/00");
                 repository.insert(excursion);
-                excursion = new Excursion(0, "wake boarding", 150.0, 1);
+                excursion = new Excursion(0, "wake boarding", 150.0, 1, "01/01/00");
                 repository.insert(excursion);
 
-                return true;
+
+            return true;
 
         }
         if(item.getItemId()==android.R.id.home){

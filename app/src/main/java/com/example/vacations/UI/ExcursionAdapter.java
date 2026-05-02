@@ -43,6 +43,9 @@ public class ExcursionAdapter extends RecyclerView.Adapter<ExcursionAdapter.Excu
                     intent.putExtra("name", current.getExcursionName());
                     intent.putExtra("price", current.getPrice());
                     intent.putExtra("vacaID", current.getVacationID());
+
+//                  excursion not displaying date when selected. trying below line to see if it works. It doesn't
+//                    intent.putExtra("date", current.getExcursionDate());
                     context.startActivity(intent);
                 }
             });

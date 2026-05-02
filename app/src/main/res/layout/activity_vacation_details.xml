@@ -65,6 +65,31 @@
                     tools:layout_editor_absoluteY="366dp"></EditText>
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/vacaStartDate"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="2dp"
+                    android:background="#03A9F4"
+                    android:inputType="none"
+                    android:hint="Start Date" />
+
+                <TextView
+                    android:id="@+id/vacaEndDate"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="2dp"
+                    android:background="#03A9F4"
+                    android:hint="End Date"
+                    android:inputType="none" />
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
@@ -73,6 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:layout_margin="4dp"
         android:src="@drawable/baseline_add_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

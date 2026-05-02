@@ -41,9 +41,9 @@ public final class VacationsDatabaseBuilder_Impl extends VacationsDatabaseBuilde
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `vacations` (`vacationID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `vacationName` TEXT, `price` REAL NOT NULL)");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `excursions` (`excursionID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `excursionName` TEXT, `price` REAL NOT NULL, `vacationID` INTEGER NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `excursions` (`excursionID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `excursionName` TEXT, `price` REAL NOT NULL, `vacationID` INTEGER NOT NULL, `excursionDate` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7a1def430ffcad654259b420cf32d08f')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f7a6b88d27472d4f8818d5972064456e')");
       }
 
       @Override
@@ -106,11 +106,12 @@ public final class VacationsDatabaseBuilder_Impl extends VacationsDatabaseBuilde
                   + " Expected:\n" + _infoVacations + "\n"
                   + " Found:\n" + _existingVacations);
         }
-        final HashMap<String, TableInfo.Column> _columnsExcursions = new HashMap<String, TableInfo.Column>(4);
+        final HashMap<String, TableInfo.Column> _columnsExcursions = new HashMap<String, TableInfo.Column>(5);
         _columnsExcursions.put("excursionID", new TableInfo.Column("excursionID", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsExcursions.put("excursionName", new TableInfo.Column("excursionName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsExcursions.put("price", new TableInfo.Column("price", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsExcursions.put("vacationID", new TableInfo.Column("vacationID", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsExcursions.put("excursionDate", new TableInfo.Column("excursionDate", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysExcursions = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesExcursions = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoExcursions = new TableInfo("excursions", _columnsExcursions, _foreignKeysExcursions, _indicesExcursions);
@@ -122,7 +123,7 @@ public final class VacationsDatabaseBuilder_Impl extends VacationsDatabaseBuilde
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "7a1def430ffcad654259b420cf32d08f", "72c1be0c7e0e28ad5d23bd777670a51f");
+    }, "f7a6b88d27472d4f8818d5972064456e", "fbdfd2fd135653065fd7ff9375cf4774");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;

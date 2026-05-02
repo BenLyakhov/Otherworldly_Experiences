@@ -35,12 +35,14 @@ public class ExcursionDetails extends AppCompatActivity {
 
     String name;
     double price;
-    int excusionID;
+    int excursionID;
     int vacationID;
+    String date;
     EditText editName;
     EditText editPrice;
     EditText editNote;
     TextView editDate;
+    String excursionDate;
     Repository repository;
     Excursion currentExcursion;
     // Datepickerdialog from video 4, timestamp 23:20
@@ -63,15 +65,16 @@ public class ExcursionDetails extends AppCompatActivity {
         repository=new Repository(getApplication());
         name = getIntent().getStringExtra("name");
         editName = findViewById(R.id.excursionName);
-//        editName = findViewById(R.id.excursionName);
         editName.setText(name);
-        price = getIntent().getDoubleExtra("price", -1.0);
+        price = getIntent().getDoubleExtra("price", 0.0);
         editPrice = findViewById(R.id.excursionPrice);
         editPrice.setText(Double.toString(price));
-        excusionID = getIntent().getIntExtra("id", -1);
-        vacationID = getIntent().getIntExtra("prodID", -1);
+        excursionID = getIntent().getIntExtra("id", -1); //setting it to 0 here improves performance
+        vacationID = getIntent().getIntExtra("vacaID", -1);
         editNote = findViewById(R.id.note);
-        editDate = findViewById(R.id.date);
+//        editDate = getIntent().getStringExtra("date");
+        editDate = findViewById(R.id.excursionDate);
+        editDate.setText(excursionDate);
 
 //  4/3/26 adding datepicker dialogue, video 4, starting 24:27
 
@@ -92,10 +95,14 @@ public class ExcursionDetails extends AppCompatActivity {
         ArrayAdapter<Vacation>vacationAdapter=new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,vacationArrayList);
         spinner.setAdapter(vacationAdapter);
 
+//        Moving these 2 lines in the onDateSet method:
         String myFormat = "MM/dd/yy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
 //        from video 4, timestamp starting 24:15:
+//        this is the code that shows the calendar when you click on the date in the date field.
+//        try putting this on the vacationDetails.java.
+//        if this is too difficult to save as a date, you can simply convert to EditText field (user types in date manually)
         editDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,8 +122,6 @@ public class ExcursionDetails extends AppCompatActivity {
 
             }
         });
-
-
     }
 
 //    The following is stuff I added, copying her live flamingo code, because she doesnt go over this stuff in her videos
@@ -126,7 +131,6 @@ public class ExcursionDetails extends AppCompatActivity {
     private void updateLabelStart() {
         String myFormat = "MM/dd/yy"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
-
         editDate.setText(sdf.format(myCalendarStart.getTime()));
     }
 
@@ -142,18 +146,53 @@ public class ExcursionDetails extends AppCompatActivity {
             return true;
         }
 
+//        Below code is testing saving the excursion date, per tasks
         if (item.getItemId() == R.id.excursionsave) {
+
             Excursion excursion;
-            if (excusionID == -1) {
-                if (repository.getmAllExcursions().size() == 0) excusionID = 1;
-                else
-                    excusionID = repository.getmAllExcursions().get(repository.getmAllExcursions().size() - 1).getExcursionID() + 1;
-                excursion = new Excursion(excusionID, editName.getText().toString(), Double.parseDouble(editPrice.getText().toString()), excusionID);
+//lines 160 and 161 not needed, repository/database does this automatically. Let database decide ID
+            if (excursionID == -1) {
+                excursionID = 1; // changed to 1 from 0, see if that helps
+            }
+            excursion = new Excursion(excursionID,
+                    editName.getText().toString(),
+                    Double.parseDouble(editPrice.getText().toString()),
+                    vacationID,
+                    editDate.getText().toString());
+
+            if (excursionID == 0) {
                 repository.insert(excursion);
             } else {
-                excursion = new Excursion(excusionID, editName.getText().toString(), Double.parseDouble(editPrice.getText().toString()), excusionID);
                 repository.update(excursion);
             }
+
+
+//            following code was commented out by Professor Ruiz
+//
+//                if (repository.getmAllExcursions().size() == 0) excusionID = 1;
+//                else
+//                    excusionID = repository.getmAllExcursions().get(repository.getmAllExcursions().size() - 1).getExcursionID() + 1;
+//                excursion = new Excursion(excusionID,
+//                                            editName.getText().toString(),
+//                                            Double.parseDouble(editPrice.getText().toString()),
+////                                            vacationID,
+//                                            excusionID,
+//                                            editDate.getText().toString());
+//
+//            } else { // goes to this line if there are excursions.
+//
+//
+//                excursion = new Excursion(excusionID,
+//                                            editName.getText().toString(),
+//                                            Double.parseDouble(editPrice.getText().toString()),
+//                                            excusionID,
+////                                            vacationID,
+//                                            editDate.getText().toString());
+//                repository.update(excursion);
+//            }
+
+//
+
             this.finish();
             return true;
         }
@@ -161,7 +200,7 @@ public class ExcursionDetails extends AppCompatActivity {
         //        adding option to delete excursions
         if(item.getItemId()==R.id.excursiondelete){
             for (Excursion excur:repository.getmAllExcursions()){
-                if(excur.getExcursionID()==excusionID)currentExcursion=excur;
+                if(excur.getExcursionID()== excursionID)currentExcursion=excur;
             }
             repository.delete(currentExcursion);
             Toast.makeText(ExcursionDetails.this, currentExcursion.getExcursionName() + " was deleted", Toast.LENGTH_LONG).show();
