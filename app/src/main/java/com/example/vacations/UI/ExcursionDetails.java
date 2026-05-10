@@ -37,7 +37,6 @@ public class ExcursionDetails extends AppCompatActivity {
     double price;
     int excursionID;
     int vacationID;
-    String date;
     EditText editName;
     EditText editPrice;
     EditText editNote;
@@ -54,27 +53,31 @@ public class ExcursionDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_excursion_details);
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//            return insets;
-//        });
+
 //      The following is in video 4, time stamp 7:02 (also found in her flamingo live code
 //      modifying parts and products with excursions and vacations
 
         repository=new Repository(getApplication());
+// suggestion: findViews first, getintents next, then set the variables
         name = getIntent().getStringExtra("name");
         editName = findViewById(R.id.excursionName);
         editName.setText(name);
+
         price = getIntent().getDoubleExtra("price", 0.0);
         editPrice = findViewById(R.id.excursionPrice);
         editPrice.setText(Double.toString(price));
+
         excursionID = getIntent().getIntExtra("id", -1); //setting it to 0 here improves performance
-        vacationID = getIntent().getIntExtra("vacaID", -1);
+        vacationID = getIntent().getIntExtra("vacationID", -1);
+//        vacationID is correct when creating a new vacation (increments appropriately)
+//        new excursion for an existing vacation default to vacationID = -1
+//        because of this, they do not get saved to that vacation. WHY?????
+
         editNote = findViewById(R.id.note);
-//        editDate = getIntent().getStringExtra("date");
-        editDate = findViewById(R.id.excursionDate);
-        editDate.setText(excursionDate);
+
+        excursionDate = getIntent().getStringExtra("excursionDate");
+        editDate = findViewById(R.id.excursiondate); // ID in xml file
+        editDate.setText(excursionDate); //variable name here
 
 //  4/3/26 adding datepicker dialogue, video 4, starting 24:27
 
@@ -152,9 +155,12 @@ public class ExcursionDetails extends AppCompatActivity {
             Excursion excursion;
 //lines 160 and 161 not needed, repository/database does this automatically. Let database decide ID
             if (excursionID == -1) {
-                excursionID = 1; // changed to 1 from 0, see if that helps
+                excursionID = 0; // changed to 1 from 0, see if that helps.
+//              5/6/26: Didn't help. This deleted the original scuba diving one
+//              deleted because it hard codes excursionID to 1, and it still sets the vacation ID to -1
             }
-            excursion = new Excursion(excursionID,
+            excursion = new Excursion(
+                    excursionID,
                     editName.getText().toString(),
                     Double.parseDouble(editPrice.getText().toString()),
                     vacationID,
@@ -166,35 +172,8 @@ public class ExcursionDetails extends AppCompatActivity {
                 repository.update(excursion);
             }
 
-
-//            following code was commented out by Professor Ruiz
-//
-//                if (repository.getmAllExcursions().size() == 0) excusionID = 1;
-//                else
-//                    excusionID = repository.getmAllExcursions().get(repository.getmAllExcursions().size() - 1).getExcursionID() + 1;
-//                excursion = new Excursion(excusionID,
-//                                            editName.getText().toString(),
-//                                            Double.parseDouble(editPrice.getText().toString()),
-////                                            vacationID,
-//                                            excusionID,
-//                                            editDate.getText().toString());
-//
-//            } else { // goes to this line if there are excursions.
-//
-//
-//                excursion = new Excursion(excusionID,
-//                                            editName.getText().toString(),
-//                                            Double.parseDouble(editPrice.getText().toString()),
-//                                            excusionID,
-////                                            vacationID,
-//                                            editDate.getText().toString());
-//                repository.update(excursion);
-//            }
-
-//
-
             this.finish();
-            return true;
+//            return true;
         }
 
         //        adding option to delete excursions

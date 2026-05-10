@@ -21,6 +21,8 @@ public class ExcursionAdapter extends RecyclerView.Adapter<ExcursionAdapter.Excu
     private List<Excursion> mExcursions;
     private final Context context;
     private final LayoutInflater mInflater;
+    private String startVacationDate;
+    private String endVacationDate;
     class ExcursionViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView excursionItemView;
@@ -42,7 +44,10 @@ public class ExcursionAdapter extends RecyclerView.Adapter<ExcursionAdapter.Excu
                     intent.putExtra("id", current.getExcursionID());
                     intent.putExtra("name", current.getExcursionName());
                     intent.putExtra("price", current.getPrice());
-                    intent.putExtra("vacaID", current.getVacationID());
+                    intent.putExtra("vacationID", current.getVacationID()); // make this same name as variable in ExcursionDetails
+                    intent.putExtra("excursionDate", current.getExcursionDate());
+                    intent.putExtra("startVacationDate", startVacationDate);
+                    intent.putExtra("endVacationDate", endVacationDate);
 
 //                  excursion not displaying date when selected. trying below line to see if it works. It doesn't
 //                    intent.putExtra("date", current.getExcursionDate());
@@ -51,9 +56,11 @@ public class ExcursionAdapter extends RecyclerView.Adapter<ExcursionAdapter.Excu
             });
         }
     }
-    public ExcursionAdapter(Context context){
+    public ExcursionAdapter(Context context, String startVacationDate, String endVacationDate){ // updated this for the vacations start and end dates
         mInflater=LayoutInflater.from(context);
         this.context=context;
+        this.startVacationDate = startVacationDate;
+        this.endVacationDate = endVacationDate;
     }
 
     @Override

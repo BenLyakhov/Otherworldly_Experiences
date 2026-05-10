@@ -86,32 +86,17 @@ public class VacationList extends AppCompatActivity {
 //            Commented out Toast when making the repository stuff in Repository.Java and VacationsDatabaseBuilder.java
 //            Toast.makeText(VacationList.this,"put in sample data",Toast.LENGTH_LONG).show();
 
-//          inputting 4 things into the app to see if they work
-//          once you click on the three dots in the vacation list page, the database will pop up in android studio
-
-
-//              Below is 4 arg contructor
-//                Vacation vacation = new Vacation(0, "Bahamas", 100.0);
-//                repository.insert(vacation);
-//                vacation = new Vacation(0, "Bali", 200.0);
-//                repository.insert(vacation);
-//                vacation = new Vacation(0, "Japan", 200.0); // initializing one vacation without excursions attached
-//                Excursion excursion = new Excursion(0, "Scuba Diving", 250.0, 1, );
-//                repository.insert(excursion);
-//                excursion = new Excursion(0, "wake boarding", 150.0, 1);
-//                repository.insert(excursion);
-
 //            5 arg constructor for excursion testing
-                Vacation vacation = new Vacation(0, "Bahamas", 100.0);
+                Vacation vacation = new Vacation(0, "Bahamas", 100.0, "Continental", "04/01/20", "04/05/20");
                 repository.insert(vacation);
-                vacation = new Vacation(0, "Bali", 200.0);
+                vacation = new Vacation(0, "Bali", 200.0, "The Royal", "05/05/22", "05/09/22");
                 repository.insert(vacation);
-                vacation = new Vacation(0, "Japan", 200.0); // initializing one vacation without excursions attached
+                vacation = new Vacation(0, "Japan", 200.0, "Osakadesu", "07/22/23", "07/30/23");
+                repository.insert(vacation);
                 Excursion excursion = new Excursion(0, "Scuba Diving", 250.0, 1, "01/01/00");
                 repository.insert(excursion);
                 excursion = new Excursion(0, "wake boarding", 150.0, 1, "01/01/00");
                 repository.insert(excursion);
-
 
             return true;
 

@@ -36,7 +36,7 @@ public final class VacationDAO_Impl implements VacationDAO {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR IGNORE INTO `vacations` (`vacationID`,`vacationName`,`price`) VALUES (nullif(?, 0),?,?)";
+        return "INSERT OR IGNORE INTO `vacations` (`vacationID`,`vacationName`,`price`,`hotelName`,`startVacaDate`,`endVacaDate`) VALUES (nullif(?, 0),?,?,?,?,?)";
       }
 
       @Override
@@ -48,6 +48,21 @@ public final class VacationDAO_Impl implements VacationDAO {
           statement.bindString(2, entity.getVacationName());
         }
         statement.bindDouble(3, entity.getPrice());
+        if (entity.getHotelName() == null) {
+          statement.bindNull(4);
+        } else {
+          statement.bindString(4, entity.getHotelName());
+        }
+        if (entity.getStartVacaDate() == null) {
+          statement.bindNull(5);
+        } else {
+          statement.bindString(5, entity.getStartVacaDate());
+        }
+        if (entity.getEndVacaDate() == null) {
+          statement.bindNull(6);
+        } else {
+          statement.bindString(6, entity.getEndVacaDate());
+        }
       }
     };
     this.__deletionAdapterOfVacation = new EntityDeletionOrUpdateAdapter<Vacation>(__db) {
@@ -66,7 +81,7 @@ public final class VacationDAO_Impl implements VacationDAO {
       @Override
       @NonNull
       protected String createQuery() {
-        return "UPDATE OR ABORT `vacations` SET `vacationID` = ?,`vacationName` = ?,`price` = ? WHERE `vacationID` = ?";
+        return "UPDATE OR ABORT `vacations` SET `vacationID` = ?,`vacationName` = ?,`price` = ?,`hotelName` = ?,`startVacaDate` = ?,`endVacaDate` = ? WHERE `vacationID` = ?";
       }
 
       @Override
@@ -78,7 +93,22 @@ public final class VacationDAO_Impl implements VacationDAO {
           statement.bindString(2, entity.getVacationName());
         }
         statement.bindDouble(3, entity.getPrice());
-        statement.bindLong(4, entity.getVacationID());
+        if (entity.getHotelName() == null) {
+          statement.bindNull(4);
+        } else {
+          statement.bindString(4, entity.getHotelName());
+        }
+        if (entity.getStartVacaDate() == null) {
+          statement.bindNull(5);
+        } else {
+          statement.bindString(5, entity.getStartVacaDate());
+        }
+        if (entity.getEndVacaDate() == null) {
+          statement.bindNull(6);
+        } else {
+          statement.bindString(6, entity.getEndVacaDate());
+        }
+        statement.bindLong(7, entity.getVacationID());
       }
     };
   }
@@ -129,6 +159,9 @@ public final class VacationDAO_Impl implements VacationDAO {
       final int _cursorIndexOfVacationID = CursorUtil.getColumnIndexOrThrow(_cursor, "vacationID");
       final int _cursorIndexOfVacationName = CursorUtil.getColumnIndexOrThrow(_cursor, "vacationName");
       final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+      final int _cursorIndexOfHotelName = CursorUtil.getColumnIndexOrThrow(_cursor, "hotelName");
+      final int _cursorIndexOfStartVacaDate = CursorUtil.getColumnIndexOrThrow(_cursor, "startVacaDate");
+      final int _cursorIndexOfEndVacaDate = CursorUtil.getColumnIndexOrThrow(_cursor, "endVacaDate");
       final List<Vacation> _result = new ArrayList<Vacation>(_cursor.getCount());
       while (_cursor.moveToNext()) {
         final Vacation _item;
@@ -142,7 +175,25 @@ public final class VacationDAO_Impl implements VacationDAO {
         }
         final double _tmpPrice;
         _tmpPrice = _cursor.getDouble(_cursorIndexOfPrice);
-        _item = new Vacation(_tmpVacationID,_tmpVacationName,_tmpPrice);
+        final String _tmpHotelName;
+        if (_cursor.isNull(_cursorIndexOfHotelName)) {
+          _tmpHotelName = null;
+        } else {
+          _tmpHotelName = _cursor.getString(_cursorIndexOfHotelName);
+        }
+        final String _tmpStartVacaDate;
+        if (_cursor.isNull(_cursorIndexOfStartVacaDate)) {
+          _tmpStartVacaDate = null;
+        } else {
+          _tmpStartVacaDate = _cursor.getString(_cursorIndexOfStartVacaDate);
+        }
+        final String _tmpEndVacaDate;
+        if (_cursor.isNull(_cursorIndexOfEndVacaDate)) {
+          _tmpEndVacaDate = null;
+        } else {
+          _tmpEndVacaDate = _cursor.getString(_cursorIndexOfEndVacaDate);
+        }
+        _item = new Vacation(_tmpVacationID,_tmpVacationName,_tmpPrice,_tmpHotelName,_tmpStartVacaDate,_tmpEndVacaDate);
         _result.add(_item);
       }
       return _result;

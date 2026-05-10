@@ -45,6 +45,9 @@ public class VacationAdapter extends RecyclerView.Adapter<VacationAdapter.Vacati
                     intent.putExtra("id", current.getVacationID());
                     intent.putExtra("name", current.getVacationName());
                     intent.putExtra("price", current.getPrice());
+                    intent.putExtra("hotelName", current.getHotelName());
+                    intent.putExtra("startvacadate", current.getStartVacaDate()); //changed from startvacadate, which is the id in the xml file
+                    intent.putExtra("endvacadate", current.getEndVacaDate()); // changed from endvacadate, which is the id in the xml file
                     context.startActivity(intent); // 1/22/26: I was missing this line. maybe it'll work now
                 }
             });
