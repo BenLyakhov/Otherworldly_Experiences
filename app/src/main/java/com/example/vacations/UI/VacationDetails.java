@@ -1,6 +1,9 @@
 package com.example.vacations.UI;
 
+import android.app.AlarmManager;
 import android.app.DatePickerDialog;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,17 +26,20 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+
 public class VacationDetails extends AppCompatActivity {
 
     String name;
     double price;
     int vacationID;
+    static int notificationID;
     String hotel;
     String startVacaDate;
     String endVacaDate;
@@ -42,6 +48,8 @@ public class VacationDetails extends AppCompatActivity {
     EditText editHotel;
     TextView editStartVacaDate;
     TextView editEndVacaDate;
+    Date startDate; // for date validation in vacationSave menu item
+    Date endDate; // for date validation in vacationSave menu item
     DatePickerDialog.OnDateSetListener startVacationDate;
     DatePickerDialog.OnDateSetListener endVacationDate;
     Repository repository;
@@ -74,12 +82,13 @@ public class VacationDetails extends AppCompatActivity {
         editPrice.setText(Double.toString(price));
 
         editStartVacaDate=findViewById(R.id.startvacadate);
-        startVacaDate = getIntent().getStringExtra("startVacaDate");
-        editStartVacaDate =findViewById(R.id.startvacadate);
+        startVacaDate = getIntent().getStringExtra("startvacadate"); //these variables need to be the same name as in the adapter
+        editStartVacaDate.setText(startVacaDate); // fixed this. now the vacation dates show
 
         editEndVacaDate=findViewById(R.id.endvacadate);
-        endVacaDate = getIntent().getStringExtra("endVacaDate");
-        editEndVacaDate =findViewById(R.id.endvacadate);
+//        endDate=findViewById(R.id.endvacadate);
+        endVacaDate = getIntent().getStringExtra("endvacadate");
+        editEndVacaDate.setText(endVacaDate); // fixed this. now the vacation dates show
 
         editHotel=findViewById(R.id.hotelName);
         hotel = getIntent().getStringExtra("hotelName");
@@ -185,7 +194,7 @@ public class VacationDetails extends AppCompatActivity {
     }
 
     private void updateLabelStart() {
-        String myFormat = "MM/dd/yy"; //In which you need put here
+        String myFormat = "MM/dd/yy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
         editStartVacaDate.setText(sdf.format(myCalendarStart.getTime()));
     }
@@ -195,8 +204,38 @@ public class VacationDetails extends AppCompatActivity {
             return true;
         }
 
+    private void scheduleAlarm(AlarmManager alarmManager, long triggerTime, String message, int notificationId) {
+        Intent intent = new Intent(VacationDetails.this, MyReceiver.class);
+        intent.putExtra("key", message);
+        intent.putExtra("notification_id", notificationId);
+        PendingIntent sender = PendingIntent.getBroadcast(VacationDetails.this, notificationId, intent, PendingIntent.FLAG_IMMUTABLE);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, triggerTime, sender);
+    }
+
         public boolean onOptionsItemSelected(MenuItem item) {
             if(item.getItemId()==R.id.vacationsave){
+
+//                Needed to convert the strings to date variables to validate them in the if statement
+//                doing this requires the try/catch stuff. Won't work otherwise
+                String myFormat = "MM/dd/yy";
+                SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+                try {
+                    startDate = sdf.parse(startVacaDate);
+                        } catch (ParseException e) {
+                    Toast.makeText(this, "Start date needs to be in valid format MM/DD/YY", Toast.LENGTH_LONG).show();
+                }
+
+                try {
+                    endDate = sdf.parse(endVacaDate);
+                } catch (ParseException e) {
+                    Toast.makeText(this, "End date needs to be in valid format MM/DD/YY", Toast.LENGTH_LONG).show();
+                }
+
+//                date formats are correct (may not be needed because of calendar date picker
+//                start and end dates
+
+
                 Vacation vacation;
                 if (vacationID==-1){
                     vacationID = 0;
@@ -210,6 +249,11 @@ public class VacationDetails extends AppCompatActivity {
                         editStartVacaDate.getText().toString(),
                         editEndVacaDate.getText().toString()
                 );
+
+//                if (startDate.after(endDate) ) {
+//                    Toast.makeText(this,"end date must be after start date", Toast.LENGTH_LONG).show();
+//                    return false; // not working
+//                }
 
                 if (vacationID == 0) {
                     repository.insert(vacation);
@@ -251,9 +295,42 @@ public class VacationDetails extends AppCompatActivity {
                 else {
                     Toast.makeText(VacationDetails.this, "Can't delete a vacation with excursions", Toast.LENGTH_LONG).show();
                 }
-            }
             return true;
-        }
+            }
+
+            if(item.getItemId()==R.id.vacationshare){
+
+                return true;
+            }
+
+            if(item.getItemId()==R.id.vacationnotify){
+                String notifyStartDateString = editStartVacaDate.getText().toString();
+                String notifyEndDateString = editEndVacaDate.getText().toString();
+                String myFormat = "MM/dd/yy";
+                SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+                Date startDateDate = null;
+                Date endDateDate = null;
+
+                try {
+                    startDateDate = sdf.parse(notifyStartDateString);
+                    endDateDate = sdf.parse(notifyEndDateString);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                try {
+                    AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+
+                    scheduleAlarm(alarmManager, startDateDate.getTime(), name + " is starting.",  notificationID++);
+                    scheduleAlarm(alarmManager, endDateDate.getTime(), name + " is ending.",  notificationID++);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+        } // end public boolean onOptionsItemSelected
 
 //        The following is the code found in VacationList.java. per video 4, this is supposed to be in
 //    VacationDetail.java. I'll leave it in both areas for now, see if it breaks anything.

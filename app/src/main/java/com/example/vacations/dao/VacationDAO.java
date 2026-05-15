@@ -21,4 +21,7 @@ public interface VacationDAO {
     void delete(Vacation vacation);
     @Query("SELECT * FROM VACATIONS ORDER BY vacationID ASC")
     List<Vacation> getAllVacations();
+
+    @Query("SELECT * FROM VACATIONS WHERE vacationID = :id Limit 1")
+    Vacation getVacationByID(int id);
 }

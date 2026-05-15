@@ -153,11 +153,16 @@ public class ExcursionDetails extends AppCompatActivity {
         if (item.getItemId() == R.id.excursionsave) {
 
             Excursion excursion;
+            Vacation vacation = repository.getVacationByID(vacationID);
+            String startVacaDate = vacation.getStartVacaDate();
+            String endVacaDate = vacation.getEndVacaDate();
+
+
+//            adding in validation for excursion dates, so that it is between the vacation dates
+//            if(startDateDate)
 //lines 160 and 161 not needed, repository/database does this automatically. Let database decide ID
             if (excursionID == -1) {
-                excursionID = 0; // changed to 1 from 0, see if that helps.
-//              5/6/26: Didn't help. This deleted the original scuba diving one
-//              deleted because it hard codes excursionID to 1, and it still sets the vacation ID to -1
+                excursionID = 0;
             }
             excursion = new Excursion(
                     excursionID,
@@ -186,7 +191,7 @@ public class ExcursionDetails extends AppCompatActivity {
             ExcursionDetails.this.finish(); // if delete was successful, go back to the main screen
         }
 
-        if (item.getItemId() == R.id.share) {
+        if (item.getItemId() == R.id.excursionshare) {
             Intent sentIntent= new Intent();
             sentIntent.setAction(Intent.ACTION_SEND);
             sentIntent.putExtra(Intent.EXTRA_TEXT, editNote.getText().toString()+ "EXTRA_TEXT");
@@ -196,7 +201,7 @@ public class ExcursionDetails extends AppCompatActivity {
             startActivity(shareIntent);
             return true;
         }
-        if (item.getItemId() == R.id.notify) {
+        if (item.getItemId() == R.id.excursionnotify) {
             String dateFromScreen = editDate.getText().toString();
             String myFormat = "MM/dd/yy";
             SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
@@ -207,10 +212,9 @@ public class ExcursionDetails extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-
             Long trigger = myDate.getTime();
             Intent intent = new Intent(ExcursionDetails.this, MyReceiver.class); //need to create new java class in UI folder with this name MyReceiver
-            intent.putExtra("key", "message I want to see");
+            intent.putExtra("key", getIntent().getStringExtra("name") + " is starting.");
             PendingIntent sender=PendingIntent.getBroadcast(ExcursionDetails.this,++MainActivity.numAlert, intent,PendingIntent.FLAG_IMMUTABLE);
 
 //          The following code is to basically wake the phone/app up to a set date and time in the future (trigger, sender)
