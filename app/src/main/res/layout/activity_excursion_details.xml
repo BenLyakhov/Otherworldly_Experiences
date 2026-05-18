@@ -81,6 +81,7 @@
                 android:id="@+id/excursiondate"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
+                android:textSize="20dp"
                 android:hint="select date"
                 android:inputType="none" />
         </androidx.appcompat.widget.LinearLayoutCompat>

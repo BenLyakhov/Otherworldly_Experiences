@@ -213,28 +213,7 @@ public class VacationDetails extends AppCompatActivity {
     }
 
         public boolean onOptionsItemSelected(MenuItem item) {
-            if(item.getItemId()==R.id.vacationsave){
-
-//                Needed to convert the strings to date variables to validate them in the if statement
-//                doing this requires the try/catch stuff. Won't work otherwise
-                String myFormat = "MM/dd/yy";
-                SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
-
-                try {
-                    startDate = sdf.parse(startVacaDate);
-                        } catch (ParseException e) {
-                    Toast.makeText(this, "Start date needs to be in valid format MM/DD/YY", Toast.LENGTH_LONG).show();
-                }
-
-                try {
-                    endDate = sdf.parse(endVacaDate);
-                } catch (ParseException e) {
-                    Toast.makeText(this, "End date needs to be in valid format MM/DD/YY", Toast.LENGTH_LONG).show();
-                }
-
-//                date formats are correct (may not be needed because of calendar date picker
-//                start and end dates
-
+            if (item.getItemId()==R.id.vacationsave){
 
                 Vacation vacation;
                 if (vacationID==-1){
@@ -250,29 +229,33 @@ public class VacationDetails extends AppCompatActivity {
                         editEndVacaDate.getText().toString()
                 );
 
-//                if (startDate.after(endDate) ) {
-//                    Toast.makeText(this,"end date must be after start date", Toast.LENGTH_LONG).show();
-//                    return false; // not working
-//                }
+//                Performing a date check, making sure the end date is after the start date.
+                String myFormat = "MM/dd/yy";
+                SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+                try {
+                    startDate = sdf.parse(editStartVacaDate.getText().toString()); //startDate is a Date variable. startVacaDate is the String variable
+                } catch (ParseException e) {
+                    Toast.makeText(this, "Start date needs to be in valid format MM/DD/YY", Toast.LENGTH_LONG).show();
+                }
+
+                try {
+                    endDate = sdf.parse(editEndVacaDate.getText().toString()); //endDate is the Date variable. endVacaDate is the string variable.
+                } catch (ParseException e) {
+                    Toast.makeText(this, "End date needs to be in valid format MM/DD/YY", Toast.LENGTH_LONG).show();
+                }
+
+//              date validation here.
+                if (!endDate.after(startDate)) {
+                    Toast.makeText(this, "End date must be after start date.", Toast.LENGTH_LONG).show();
+                    return false;
+                }
 
                 if (vacationID == 0) {
                     repository.insert(vacation);
                 } else {
                     repository.update(vacation);
                 }
-//                    if (repository.getmAllVacations().size() == 0) vacationID = 1;
-//                    else vacationID = repository.getmAllVacations().get(repository.getmAllVacations().size() - 1).getVacationID() +1;
-////          The above else statement is saying if the repository (ie, list of all vacations) is not 0, get the list, count its size, -1
-////          because coding is 0 based, and then add one to insert the new vacation at the end of the list
-//                    vacation = new Vacation(vacationID, editName.getText().toString(), Double.parseDouble((editPrice.getText().toString())));
-//                    repository.insert(vacation);
-//                    this.finish(); // goes back to the list screen
-//                }
-//                else { // this else statement is for if you are modifying a vacation (time stamp video 3, 1:29:40)
-//                    vacation = new Vacation(vacationID, editName.getText().toString(), Double.parseDouble((editPrice.getText().toString())));
-//                    repository.update(vacation);
-//                    this.finish();
-//                }
                 this.finish();
             }
 // video 4, 1:17:14, adding the delete vacation function
@@ -331,6 +314,11 @@ public class VacationDetails extends AppCompatActivity {
             }
             return super.onOptionsItemSelected(item);
         } // end public boolean onOptionsItemSelected
+
+    public void saveVacation() { //this is to try to save the vacation dates correctly. What i've been doing in the menu function
+//        is not working
+
+    }
 
 //        The following is the code found in VacationList.java. per video 4, this is supposed to be in
 //    VacationDetail.java. I'll leave it in both areas for now, see if it breaks anything.

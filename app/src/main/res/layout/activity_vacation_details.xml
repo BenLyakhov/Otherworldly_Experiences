@@ -106,8 +106,8 @@
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:background="#1477DC"
-                    android:outlineAmbientShadowColor="@color/black"
-                    android:hint="select start date here"
+                    android:textSize="20dp"
+                    android:hint="select start date"
                     android:inputType="none" />
             </LinearLayout>
 
@@ -128,8 +128,8 @@
                     android:layout_height="match_parent"
                     android:inputType="none"
                     android:background="#1477DC"
-                    android:outlineAmbientShadowColor="@color/black"
-                    android:hint="select end date here"/>
+                    android:textSize="20dp"
+                    android:hint="select end date"/>
             </LinearLayout>
 
         </LinearLayout>

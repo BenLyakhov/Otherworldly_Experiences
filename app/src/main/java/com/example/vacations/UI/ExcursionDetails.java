@@ -41,7 +41,12 @@ public class ExcursionDetails extends AppCompatActivity {
     EditText editPrice;
     EditText editNote;
     TextView editDate;
-    String excursionDate;
+    Date excDateDate;
+    Date vacaStartDate;
+    Date vacaEndDate;
+    String vacaStartDateString;
+    String vacaEndDateString;
+    String excursionDateString;
     Repository repository;
     Excursion currentExcursion;
     // Datepickerdialog from video 4, timestamp 23:20
@@ -73,11 +78,14 @@ public class ExcursionDetails extends AppCompatActivity {
 //        new excursion for an existing vacation default to vacationID = -1
 //        because of this, they do not get saved to that vacation. WHY?????
 
+        vacaStartDateString = getIntent().getStringExtra("startVacationDate");
+        vacaEndDateString = getIntent().getStringExtra("endVacationDate");
+
         editNote = findViewById(R.id.note);
 
-        excursionDate = getIntent().getStringExtra("excursionDate");
+        excursionDateString = getIntent().getStringExtra("excursionDate");
         editDate = findViewById(R.id.excursiondate); // ID in xml file
-        editDate.setText(excursionDate); //variable name here
+        editDate.setText(excursionDateString); //variable name here
 
 //  4/3/26 adding datepicker dialogue, video 4, starting 24:27
 
@@ -126,7 +134,6 @@ public class ExcursionDetails extends AppCompatActivity {
             }
         });
     }
-
 //    The following is stuff I added, copying her live flamingo code, because she doesnt go over this stuff in her videos
 //    This stuff is basically copying what she went over in VacationDetails.java, but modifying them
 //    for ExcursionDetails here
@@ -143,19 +150,17 @@ public class ExcursionDetails extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
-
         if (item.getItemId() == android.R.id.home) {
             this.finish();
             return true;
         }
 
+
+
 //        Below code is testing saving the excursion date, per tasks
         if (item.getItemId() == R.id.excursionsave) {
 
             Excursion excursion;
-            Vacation vacation = repository.getVacationByID(vacationID);
-            String startVacaDate = vacation.getStartVacaDate();
-            String endVacaDate = vacation.getEndVacaDate();
 
 
 //            adding in validation for excursion dates, so that it is between the vacation dates
@@ -170,6 +175,26 @@ public class ExcursionDetails extends AppCompatActivity {
                     Double.parseDouble(editPrice.getText().toString()),
                     vacationID,
                     editDate.getText().toString());
+
+//            adding date validation here, making sure the excursion date is between the vacation start and end dates.
+
+            String myFormat = "MM/dd/yy";
+            SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+            try {
+                excDateDate = sdf.parse(editDate.getText().toString());
+                vacaStartDate = sdf.parse(vacaStartDateString);
+                vacaEndDate = sdf.parse(vacaEndDateString);
+            } catch (ParseException e) {
+                Toast.makeText(this, "Start and End dates needs to be in valid format MM/DD/YY", Toast.LENGTH_LONG).show();
+            }
+
+
+//            Date validation here
+            if(excDateDate.before(vacaStartDate) || excDateDate.after(vacaEndDate)){
+                Toast.makeText(this, "Excursion Date must be between " + vacaEndDateString + " and " + vacaEndDateString, Toast.LENGTH_LONG).show();
+                return false;
+            }
 
             if (excursionID == 0) {
                 repository.insert(excursion);
