@@ -3798,7 +3798,6 @@ id currentState
 id custom
 id customPanel
 id cut
-id date
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3839,6 +3838,7 @@ id elastic
 id embed
 id end
 id endToStart
+id endvacadate
 id enterAlways
 id enterAlwaysCollapsed
 id entireSpace
@@ -3846,7 +3846,11 @@ id escape
 id excursionName
 id excursionPrice
 id excursionRecyclerView
+id excursiondate
+id excursiondelete
+id excursionnotify
 id excursionsave
+id excursionshare
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3886,6 +3890,8 @@ id homeAsUp
 id honorRequest
 id horizontal
 id horizontal_only
+id hotel
+id hotelName
 id icon
 id icon_group
 id ifRoom
@@ -3998,7 +4004,6 @@ id note
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id notify
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -4078,7 +4083,6 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
-id share
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -4112,6 +4116,7 @@ id startHorizontal
 id startToEnd
 id startVertical
 id start_center
+id startvacadate
 id staticLayout
 id staticPostLayout
 id stop
@@ -4181,7 +4186,9 @@ id up
 id useLogo
 id vacation
 id vacationdelete
+id vacationnotify
 id vacationsave
+id vacationshare
 id vertical
 id vertical_only
 id view_offset_helper

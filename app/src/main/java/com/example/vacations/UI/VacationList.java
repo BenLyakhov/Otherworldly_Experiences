@@ -87,15 +87,15 @@ public class VacationList extends AppCompatActivity {
 //            Toast.makeText(VacationList.this,"put in sample data",Toast.LENGTH_LONG).show();
 
 //            5 arg constructor for excursion testing
-                Vacation vacation = new Vacation(0, "Bahamas", 100.0, "Continental", "04/01/20", "04/05/20");
+                Vacation vacation = new Vacation(0, "Bahamas", 1000.0, "The Continental", "05/01/26", "05/06/26");
                 repository.insert(vacation);
-                vacation = new Vacation(0, "Bali", 200.0, "The Royal", "05/05/22", "05/09/22");
+                vacation = new Vacation(0, "Bali", 2000.0, "The Royal", "04/20/26", "04/30/26");
                 repository.insert(vacation);
-                vacation = new Vacation(0, "Japan", 200.0, "Osakadesu", "07/22/23", "07/30/23");
+                vacation = new Vacation(0, "Japan", 3000.0, "Osaka", "05/10/26", "05/17/26");
                 repository.insert(vacation);
-                Excursion excursion = new Excursion(0, "Scuba Diving", 250.0, 1, "01/01/00");
+                Excursion excursion = new Excursion(0, "Scuba Diving", 250.0, 1, "05/02/26");
                 repository.insert(excursion);
-                excursion = new Excursion(0, "wake boarding", 150.0, 1, "01/01/00");
+                excursion = new Excursion(0, "Wake Boarding", 150.0, 1, "05/04/26");
                 repository.insert(excursion);
 
             return true;

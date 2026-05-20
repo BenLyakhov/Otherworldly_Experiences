@@ -119,7 +119,7 @@ public class ExcursionDetails extends AppCompatActivity {
             public void onClick(View v) {
                 Date date;
                 String info = editDate.getText().toString();
-                if (info.equals("")) info="01/01/26"; // setting default date to 01/01/00
+                if (info.equals("")) info="05/01/26";
                 try {
                     myCalendarStart.setTime(sdf.parse(info));//sdf = date formater
                 } catch (ParseException e) {
@@ -192,7 +192,7 @@ public class ExcursionDetails extends AppCompatActivity {
 
 //            Date validation here
             if(excDateDate.before(vacaStartDate) || excDateDate.after(vacaEndDate)){
-                Toast.makeText(this, "Excursion Date must be between " + vacaEndDateString + " and " + vacaEndDateString, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Excursion Date must be between " + vacaStartDateString + " and " + vacaEndDateString, Toast.LENGTH_LONG).show();
                 return false;
             }
 
@@ -216,11 +216,12 @@ public class ExcursionDetails extends AppCompatActivity {
             ExcursionDetails.this.finish(); // if delete was successful, go back to the main screen
         }
 
-        if (item.getItemId() == R.id.excursionshare) {
+        if (item.getItemId() == R.id.excursionshare) { //sharing excursion details is not necessary for WGU task submission.
+//            This part is taken care of in Task B3F, sharing all vacation details.
             Intent sentIntent= new Intent();
             sentIntent.setAction(Intent.ACTION_SEND);
-            sentIntent.putExtra(Intent.EXTRA_TEXT, editNote.getText().toString()+ "EXTRA_TEXT");
-            sentIntent.putExtra(Intent.EXTRA_TITLE, editNote.getText().toString()+ "EXTRA_TITLE");
+            sentIntent.putExtra(Intent.EXTRA_TEXT, editName.getText().toString()+ "EXTRA_TEXT");
+            sentIntent.putExtra(Intent.EXTRA_TITLE, editDate.getText().toString()+ "EXTRA_TITLE");
             sentIntent.setType("text/plain");
             Intent shareIntent=Intent.createChooser(sentIntent,null);
             startActivity(shareIntent);

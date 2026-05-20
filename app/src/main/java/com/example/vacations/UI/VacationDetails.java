@@ -126,7 +126,7 @@ public class VacationDetails extends AppCompatActivity {
             public void onClick(View v) {
                 Date date;
                 String info = editStartVacaDate.getText().toString();
-                if (info.equals("")) info="01/01/26"; // setting default date to 01/01/26
+                if (info.equals("")) info="05/01/26"; // setting default date to 01/01/26
                 try {
                     myCalendarStart.setTime(sdf.parse(info));//sdf = date formater
                 } catch (ParseException e) {
@@ -156,7 +156,7 @@ public class VacationDetails extends AppCompatActivity {
             public void onClick(View v) {
                 Date date;
                 String info = editEndVacaDate.getText().toString();
-                if (info.equals("")) info="01/01/26"; // setting default date to 01/01/26
+                if (info.equals("")) info="05/01/26"; // setting default date to 01/01/26
                 try {
                     myCalendarStart.setTime(sdf.parse(info));//sdf = date formater
                 } catch (ParseException e) {
@@ -266,7 +266,7 @@ public class VacationDetails extends AppCompatActivity {
                 numExcursions = 0;
 //                the following for loop checks to see if there are any excursions associated with the vacation before deleting it
                 for(Excursion excursion:repository.getmAllExcursions()){
-                    if(excursion.getExcursionID()==vacationID)++numExcursions; //increment = counter. If there are excursions
+                    if(excursion.getVacationID()==vacationID)++numExcursions; //increment = counter. If there are excursions
                 }
 
 //                after the above for loop, if there are still no excursions attached, delete the vacation.

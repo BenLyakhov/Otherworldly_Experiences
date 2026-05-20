@@ -3797,7 +3797,6 @@ int id currentState 0x7f08008d
 int id custom 0x7f08008e
 int id customPanel 0x7f08008f
 int id cut 0x7f080090
-int id date 0x7f080091
 int id date_picker_actions 0x7f080092
 int id decelerate 0x7f080093
 int id decelerateAndComplete 0x7f080094
@@ -3838,6 +3837,7 @@ int id elastic 0x7f0800b6
 int id embed 0x7f0800b7
 int id end 0x7f0800b8
 int id endToStart 0x7f0800b9
+int id endvacadate 0x7f080228
 int id enterAlways 0x7f0800ba
 int id enterAlwaysCollapsed 0x7f0800bb
 int id entireSpace 0x7f0800bc
@@ -3845,7 +3845,11 @@ int id escape 0x7f0800bd
 int id excursionName 0x7f0800be
 int id excursionPrice 0x7f0800bf
 int id excursionRecyclerView 0x7f0800c0
+int id excursiondate 0x7f08022d
+int id excursiondelete 0x7f080225
+int id excursionnotify 0x7f08022e
 int id excursionsave 0x7f0800c1
+int id excursionshare 0x7f08022f
 int id exitUntilCollapsed 0x7f0800c2
 int id expand_activities_button 0x7f0800c3
 int id expanded_menu 0x7f0800c4
@@ -3885,6 +3889,8 @@ int id homeAsUp 0x7f0800e5
 int id honorRequest 0x7f0800e6
 int id horizontal 0x7f0800e7
 int id horizontal_only 0x7f0800e8
+int id hotel 0x7f08022a
+int id hotelName 0x7f08022b
 int id icon 0x7f0800e9
 int id icon_group 0x7f0800ea
 int id ifRoom 0x7f0800eb
@@ -3997,7 +4003,6 @@ int id note 0x7f080155
 int id notification_background 0x7f080156
 int id notification_main_column 0x7f080157
 int id notification_main_column_container 0x7f080158
-int id notify 0x7f080159
 int id off 0x7f08015a
 int id on 0x7f08015b
 int id onInterceptTouchReturnSwipe 0x7f08015c
@@ -4077,7 +4082,6 @@ int id search_voice_btn 0x7f0801a5
 int id select_dialog_listview 0x7f0801a6
 int id selected 0x7f0801a7
 int id selection_type 0x7f0801a8
-int id share 0x7f0801a9
 int id sharedValueSet 0x7f0801aa
 int id sharedValueUnset 0x7f0801ab
 int id shortcut 0x7f0801ac
@@ -4111,6 +4115,7 @@ int id startHorizontal 0x7f0801c7
 int id startToEnd 0x7f0801c8
 int id startVertical 0x7f0801c9
 int id start_center 0x7f0801ca
+int id startvacadate 0x7f08022c
 int id staticLayout 0x7f0801cb
 int id staticPostLayout 0x7f0801cc
 int id stop 0x7f0801cd
@@ -4180,7 +4185,9 @@ int id up 0x7f08020c
 int id useLogo 0x7f08020d
 int id vacation 0x7f08020e
 int id vacationdelete 0x7f08020f
+int id vacationnotify 0x7f080230
 int id vacationsave 0x7f080210
+int id vacationshare 0x7f080231
 int id vertical 0x7f080211
 int id vertical_only 0x7f080212
 int id view_offset_helper 0x7f080213
