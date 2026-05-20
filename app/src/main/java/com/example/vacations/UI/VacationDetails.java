@@ -283,6 +283,52 @@ public class VacationDetails extends AppCompatActivity {
 
             if(item.getItemId()==R.id.vacationshare){
 
+                List<Excursion> associatedExcursions = new ArrayList<>();
+                for (Excursion e : repository.getmAllExcursions()) {
+                    if(e.getVacationID() == vacationID) associatedExcursions.add(e);
+                }
+
+                String title = editName.getText().toString();
+                String hotel = editHotel.getText().toString();
+                String start = editStartVacaDate.getText().toString();
+                String end = editEndVacaDate.getText().toString();
+
+                StringBuilder associatedExcursionDetails = new StringBuilder();
+                for (Excursion e : associatedExcursions) {
+                    associatedExcursionDetails.append("Excursion Name: ").append(e.getExcursionName())
+                            .append("\nExcursion Price: ").append(e.getPrice())
+                            .append("\nExcursion Date: ").append(e.getExcursionDate()+"\n\n");
+
+                }
+
+                StringBuilder vacationDetailsShareText = new StringBuilder();
+                vacationDetailsShareText.append("Vacation: ").append(title)
+                        .append("\nHotel: ").append(hotel)
+                        .append("\nStart: ").append(start)
+                        .append("\nEnd: ").append(end)
+                        .append("\n\nHere are the associated Excursions: \n").append(associatedExcursionDetails);
+
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType("text/plain");
+                share.putExtra(Intent.EXTRA_TEXT, vacationDetailsShareText.toString());
+                share.putExtra(Intent.EXTRA_SUBJECT, "Vacation: " + title);
+                startActivity(Intent.createChooser(share, "Share vacation via"));
+
+
+
+//                repository.getAssociatedExcursions(vacationID);
+
+
+//                    if (excursions != null && !excursions.empty()) {
+//                        vacationDetailsShareText.append("\n\nExcursions:");
+//                        for (com.wgu.d308.entities.Excursion excursion : excursions) {
+//                            vacationDetailsShareText.append("\n- ").append(excursion.getTitle())
+//                                    .append(" (").append(excursion.getDate()).append(")");
+//                        }
+//                    }
+
+
+
                 return true;
             }
 
