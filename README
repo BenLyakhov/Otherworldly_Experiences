@@ -1,0 +1,41 @@
+# Vacation App – README
+### Ben Lyakhov, 010811311
+
+## Title and Purpose
+**Vacation ** is a mobile Android App that lets users keep track of their vacations and excursions for those vacations. Users are able to add, remove, or update vacation and excursion details such as the hotel they are staying at and the dates of the vacation and excursion(s) for each vacation.
+
+## How to Operate the Application
+
+### Home Screen
+- Running the app will take you to the Home Screen.
+- Tap **Enter** to navigate to the vacation list.
+
+### Vacation List
+- This screen displays all vacations that are currently saved on the application.
+- Tap the button with the **+** sign (FAB) in the lower right corner to add a new vacation.
+- Tap the name of a vacation to see its details, as well as any associated excursions for that vacation.
+
+### Vacation Details
+- Once you click on the name of a vacation, or create a new one, this window is where you can update the vacation details, such as the Title, the Hotel, the Price and when the vacation starts and ends.
+- Tapping on the date fields will open a calendar pop-up, where you can select the date on which the vacation will start and end.
+- Use the top menu in the upper right corner(⋮) to:
+  - Save the vacation
+  - Delete the vacation. You are unable to delete vacations if there are associated excursions present.
+  - Share Details. This will allow you to share the vacation and excursions for that vacation via text, email, or other provided method.
+  - Notify. This will set an alarm and send you an alert, informing the user when the vacation will start and end, on the date that it starts and ends.
+- If any excursions exist, they will populate below the vacation details. Click on the name of an excursion to view its details or, if no excursions exists, tap on the FAB (+) in the lower right corner of the screen to add a new excursion.
+
+### Excursion Details
+- Here, you can edit the name, the price, and the date of the excursion. The date of the excursion must be in between the vacation start and end dates, as there is validation in the app that will not let you save the excursion otherwise.
+- Tap the date field to open a the calendar popup to select the date of the excursion.
+- Use the top menu in the upper right corner (⋮) to:
+  - Save the Excursion
+  - Delete the excursion
+  - Share Details of the excursion via text or other method
+  - Notify when the excursion will be starting
+
+## Android Version
+The signed APK is deployed to **Android 16.0 ("Baklava")**. The target SDK is **API level 36**.
+
+## Repository
+https://gitlab.com/wgu-gitlab-environment/student-repos/blyakho/d308-mobile-application-development-android.git

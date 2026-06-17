@@ -1,0 +1,9 @@
+Panopto Vide 3, 1:15:02, looking at activity_vacation_details.xml:
+-> within a linear layout, she has one textview and one edittext. the text view does not have an id. She has also
+created 2 linear layouts "next" to each other (ie, one after the other). When she first did the linear layouts, she created a nested linear layout.
+
+
+Stopped at 1:15:50 to fix activity_vacation_details.xml
+
+12/18/25: FIXED at 26:00, she made 2 horizontal linear layouts, one right after the other, all within the "master' linear layout with vertical orientation
+
