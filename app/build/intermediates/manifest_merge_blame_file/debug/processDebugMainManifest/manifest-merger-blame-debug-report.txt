@@ -9,99 +9,99 @@
 9        android:targetSdkVersion="36" />
 10
 11    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-11-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:5:5-76
-11-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:5:22-74
+11-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:5:5-76
+11-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:5:22-74
 12
 13    <permission
-13-->[androidx.core:core:1.13.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\7fd6b82050b80a0555e83c619c0170f7\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+13-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\4d93c3b69a32ebd5b3dde7e8ee97d52e\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
 14        android:name="com.example.vacations.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.13.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\7fd6b82050b80a0555e83c619c0170f7\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+14-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\4d93c3b69a32ebd5b3dde7e8ee97d52e\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
 15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.13.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\7fd6b82050b80a0555e83c619c0170f7\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+15-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\4d93c3b69a32ebd5b3dde7e8ee97d52e\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
 16
 17    <uses-permission android:name="com.example.vacations.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.13.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\7fd6b82050b80a0555e83c619c0170f7\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.13.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\7fd6b82050b80a0555e83c619c0170f7\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+17-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\4d93c3b69a32ebd5b3dde7e8ee97d52e\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\4d93c3b69a32ebd5b3dde7e8ee97d52e\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
 18
 19    <application
-19-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:6:5-45:19
+19-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:6:5-45:19
 20        android:allowBackup="true"
-20-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:7:9-35
+20-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:7:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.13.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\7fd6b82050b80a0555e83c619c0170f7\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+21-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\4d93c3b69a32ebd5b3dde7e8ee97d52e\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 22        android:dataExtractionRules="@xml/data_extraction_rules"
-22-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:8:9-65
+22-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:8:9-65
 23        android:debuggable="true"
 24        android:extractNativeLibs="false"
 25        android:fullBackupContent="@xml/backup_rules"
-25-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:9:9-54
+25-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:9:9-54
 26        android:icon="@mipmap/ic_launcher"
-26-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:10:9-43
+26-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:10:9-43
 27        android:label="@string/app_name"
-27-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:11:9-41
+27-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:11:9-41
 28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:12:9-54
+28-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:12:9-54
 29        android:supportsRtl="true"
-29-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:13:9-35
+29-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:13:9-35
 30        android:testOnly="true"
 31        android:theme="@style/Theme.Vacations" >
-31-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:14:9-47
+31-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:14:9-47
 32        <receiver
-32-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:15:9-18:48
-33            android:name="com.example.vacations.UI.MyReceiver"
-33-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:16:13-42
+32-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:15:9-18:48
+33            android:name="com.example.oe.UI.MyReceiver"
+33-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:16:13-42
 34            android:enabled="true"
-34-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:17:13-35
+34-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:17:13-35
 35            android:exported="true" />
-35-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:18:13-36
+35-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:18:13-36
 36
 37        <activity
-37-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:20:9-24:64
-38            android:name="com.example.vacations.UI.ExcursionDetails"
-38-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:21:13-48
+37-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:20:9-24:64
+38            android:name="com.example.oe.UI.ExcursionDetails"
+38-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:21:13-48
 39            android:exported="false"
-39-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:22:13-37
+39-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:22:13-37
 40            android:label="Excursion Details"
-40-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:23:13-46
-41            android:parentActivityName="com.example.vacations.UI.VacationDetails" />
-41-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:24:13-61
+40-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:23:13-46
+41            android:parentActivityName="com.example.oe.UI.VacationDetails" />
+41-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:24:13-61
 42        <activity
-42-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:25:9-29:61
-43            android:name="com.example.vacations.UI.VacationDetails"
-43-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:26:13-47
+42-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:25:9-29:61
+43            android:name="com.example.oe.UI.VacationDetails"
+43-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:26:13-47
 44            android:exported="false"
-44-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:27:13-37
+44-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:27:13-37
 45            android:label="Vacation Details and Excursion List"
-45-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:28:13-64
-46            android:parentActivityName="com.example.vacations.UI.VacationList" />
-46-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:29:13-58
+45-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:28:13-64
+46            android:parentActivityName="com.example.oe.UI.VacationList" />
+46-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:29:13-58
 47        <activity
-47-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:30:9-34:61
-48            android:name="com.example.vacations.UI.VacationList"
-48-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:31:13-44
+47-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:30:9-34:61
+48            android:name="com.example.oe.UI.VacationList"
+48-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:31:13-44
 49            android:exported="false"
-49-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:32:13-37
+49-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:32:13-37
 50            android:label="Vacation List"
-50-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:33:13-42
-51            android:parentActivityName="com.example.vacations.UI.MainActivity" />
-51-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:34:13-58
+50-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:33:13-42
+51            android:parentActivityName="com.example.oe.UI.MainActivity" />
+51-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:34:13-58
 52        <activity
-52-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:35:9-44:20
-53            android:name="com.example.vacations.UI.MainActivity"
-53-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:36:13-44
+52-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:35:9-44:20
+53            android:name="com.example.oe.UI.MainActivity"
+53-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:36:13-44
 54            android:exported="true"
-54-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:37:13-36
+54-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:37:13-36
 55            android:label="Main Activity" >
-55-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:38:13-42
+55-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:38:13-42
 56            <intent-filter>
-56-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:39:13-43:29
+56-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:39:13-43:29
 57                <action android:name="android.intent.action.MAIN" />
-57-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:40:17-69
-57-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:40:25-66
+57-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:40:17-69
+57-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:40:25-66
 58
 59                <category android:name="android.intent.category.LAUNCHER" />
-59-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:42:17-77
-59-->D:\WGU\WGU docs\D308 - Mobile Application Development\Vacations\app\src\main\AndroidManifest.xml:42:27-74
+59-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:42:17-77
+59-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:42:27-74
 60            </intent-filter>
 61        </activity>
 62

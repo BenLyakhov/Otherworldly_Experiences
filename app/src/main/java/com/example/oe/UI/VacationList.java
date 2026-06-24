@@ -16,9 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oe.R;
 import com.example.oe.database.Repository;
-import com.example.oe.entities.Excursion;
 import com.example.oe.entities.Vacation;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.kizitonwose.calendar.view.CalendarView;
 
 import java.util.List;
 
@@ -79,26 +79,30 @@ public class VacationList extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
-        if(item.getItemId()==R.id.mysample) {
-            repository = new Repository(getApplication());
-//            Commented out Toast when making the repository stuff in Repository.Java and VacationsDatabaseBuilder.java
-//            Toast.makeText(VacationList.this,"put in sample data",Toast.LENGTH_LONG).show();
 
-//            5 arg constructor for excursion testing
-                Vacation vacation = new Vacation(0, "Bahamas", 1000.0, "The Continental", "05/01/26", "05/06/26");
-                repository.insert(vacation);
-                vacation = new Vacation(0, "Bali", 2000.0, "The Royal", "04/20/26", "04/30/26");
-                repository.insert(vacation);
-                vacation = new Vacation(0, "Japan", 3000.0, "Osaka", "05/10/26", "05/17/26");
-                repository.insert(vacation);
-                Excursion excursion = new Excursion(0, "Scuba Diving", 250.0, 1, "05/02/26");
-                repository.insert(excursion);
-                excursion = new Excursion(0, "Wake Boarding", 150.0, 1, "05/04/26");
-                repository.insert(excursion);
+//        blocking code for sample item code. Not necessary anymore. This is temporary fix
 
-            return true;
+//        if(item.getItemId()==R.id.mysample) {
+//            repository = new Repository(getApplication());
+////            Commented out Toast when making the repository stuff in Repository.Java and VacationsDatabaseBuilder.java
+////            Toast.makeText(VacationList.this,"put in sample data",Toast.LENGTH_LONG).show();
+//
+////            5 arg constructor for excursion testing
+//                Vacation vacation = new Vacation(0, "Bahamas", 1000.0, "The Continental", "05/01/26", "05/06/26");
+//                repository.insert(vacation);
+//                vacation = new Vacation(0, "Bali", 2000.0, "The Royal", "04/20/26", "04/30/26");
+//                repository.insert(vacation);
+//                vacation = new Vacation(0, "Japan", 3000.0, "Osaka", "05/10/26", "05/17/26");
+//                repository.insert(vacation);
+//                Excursion excursion = new Excursion(0, "Scuba Diving", 250.0, 1, "05/02/26");
+//                repository.insert(excursion);
+//                excursion = new Excursion(0, "Wake Boarding", 150.0, 1, "05/04/26");
+//                repository.insert(excursion);
+//
+//            return true;
+//
+//        }
 
-        }
         if(item.getItemId()==android.R.id.home){
             this.finish(); // this part makes the back arrow work to the previous page. can program it to go somewhere else
 //          android.parentActivityName is what you link the back arrow to when on that page, in AndroidManifest

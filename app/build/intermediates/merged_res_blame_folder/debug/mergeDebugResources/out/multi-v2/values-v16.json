@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.vacations.app-mergeDebugResources-36:/values-v16/values-v16.xml",
+            "outputFile": "com.example.oe.app-mergeDebugResources-37:/values-v16/values-v16.xml",
             "map": [
                 {
                     "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\304188536e43ba4fede0d4fa9550a97c\\transformed\\appcompat-1.7.1\\res\\values-v16\\values-v16.xml",

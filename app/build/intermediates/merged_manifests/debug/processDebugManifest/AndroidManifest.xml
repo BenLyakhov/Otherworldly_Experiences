@@ -30,27 +30,27 @@
         android:testOnly="true"
         android:theme="@style/Theme.Vacations" >
         <receiver
-            android:name="com.example.vacations.UI.MyReceiver"
+            android:name="com.example.oe.UI.MyReceiver"
             android:enabled="true"
             android:exported="true" />
 
         <activity
-            android:name="com.example.vacations.UI.ExcursionDetails"
+            android:name="com.example.oe.UI.ExcursionDetails"
             android:exported="false"
             android:label="Excursion Details"
-            android:parentActivityName="com.example.vacations.UI.VacationDetails" />
+            android:parentActivityName="com.example.oe.UI.VacationDetails" />
         <activity
-            android:name="com.example.vacations.UI.VacationDetails"
+            android:name="com.example.oe.UI.VacationDetails"
             android:exported="false"
             android:label="Vacation Details and Excursion List"
-            android:parentActivityName="com.example.vacations.UI.VacationList" />
+            android:parentActivityName="com.example.oe.UI.VacationList" />
         <activity
-            android:name="com.example.vacations.UI.VacationList"
+            android:name="com.example.oe.UI.VacationList"
             android:exported="false"
             android:label="Vacation List"
-            android:parentActivityName="com.example.vacations.UI.MainActivity" />
+            android:parentActivityName="com.example.oe.UI.MainActivity" />
         <activity
-            android:name="com.example.vacations.UI.MainActivity"
+            android:name="com.example.oe.UI.MainActivity"
             android:exported="true"
             android:label="Main Activity" >
             <intent-filter>

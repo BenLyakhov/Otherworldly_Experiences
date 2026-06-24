@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.vacations.app-mergeDebugResources-36:/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "com.example.oe.app-mergeDebugResources-37:/values-fr-rCA/values-fr-rCA.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\4d93c3b69a32ebd5b3dde7e8ee97d52e\\transformed\\core-1.13.1\\res\\values-fr-rCA\\values-fr-rCA.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,354,456,560,664,778",
+                        "endColumns": "97,101,98,101,103,103,113,100",
+                        "endOffsets": "148,250,349,451,555,659,773,874"
+                    },
+                    "to": {
+                        "startLines": "37,38,39,40,41,42,43,121",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3477,3575,3677,3776,3878,3982,4086,10462",
+                        "endColumns": "97,101,98,101,103,103,113,100",
+                        "endOffsets": "3570,3672,3771,3873,3977,4081,4195,10558"
+                    }
+                },
                 {
                     "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\304188536e43ba4fede0d4fa9550a97c\\transformed\\appcompat-1.7.1\\res\\values-fr-rCA\\values-fr-rCA.xml",
                     "from": {
@@ -18,23 +35,6 @@
                         "startOffsets": "333,444,551,661,748,854,984,1069,1149,1240,1333,1431,1526,1626,1719,1812,1907,1998,2089,2175,2285,2396,2499,2610,2718,2825,2984,10130",
                         "endColumns": "110,106,109,86,105,129,84,79,90,92,97,94,99,92,92,94,90,90,85,109,110,102,110,107,106,158,98,86",
                         "endOffsets": "439,546,656,743,849,979,1064,1144,1235,1328,1426,1521,1621,1714,1807,1902,1993,2084,2170,2280,2391,2494,2605,2713,2820,2979,3078,10212"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\7fd6b82050b80a0555e83c619c0170f7\\transformed\\core-1.13.0\\res\\values-fr-rCA\\values-fr-rCA.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,354,456,560,664,778",
-                        "endColumns": "97,101,98,101,103,103,113,100",
-                        "endOffsets": "148,250,349,451,555,659,773,874"
-                    },
-                    "to": {
-                        "startLines": "37,38,39,40,41,42,43,121",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3477,3575,3677,3776,3878,3982,4086,10462",
-                        "endColumns": "97,101,98,101,103,103,113,100",
-                        "endOffsets": "3570,3672,3771,3873,3977,4081,4195,10558"
                     }
                 },
                 {

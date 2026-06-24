@@ -1,27 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.vacations.app-mergeDebugResources-36:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.oe.app-mergeDebugResources-37:/values-night-v8/values-night-v8.xml",
             "map": [
-                {
-                    "source": "D:\\WGU\\WGU docs\\D308 - Mobile Application Development\\Vacations\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "102",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "309"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "155"
-                    }
-                },
                 {
                     "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\304188536e43ba4fede0d4fa9550a97c\\transformed\\appcompat-1.7.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
@@ -37,6 +18,25 @@
                         "startOffsets": "160,230,314,398,494,596,698,3680",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "225,309,393,489,591,693,787,3764"
+                    }
+                },
+                {
+                    "source": "D:\\WGU\\WGU docs\\D424 - Software Engineering Capstone\\OE\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "309"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "155"
                     }
                 },
                 {

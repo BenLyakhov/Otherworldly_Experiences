@@ -105,7 +105,7 @@ public final class VacationsDatabaseBuilder_Impl extends VacationsDatabaseBuilde
         final TableInfo _infoVacations = new TableInfo("vacations", _columnsVacations, _foreignKeysVacations, _indicesVacations);
         final TableInfo _existingVacations = TableInfo.read(db, "vacations");
         if (!_infoVacations.equals(_existingVacations)) {
-          return new RoomOpenHelper.ValidationResult(false, "vacations(com.example.vacations.entities.Vacation).\n"
+          return new RoomOpenHelper.ValidationResult(false, "vacations(com.example.oe.entities.Vacation).\n"
                   + " Expected:\n" + _infoVacations + "\n"
                   + " Found:\n" + _existingVacations);
         }
@@ -120,7 +120,7 @@ public final class VacationsDatabaseBuilder_Impl extends VacationsDatabaseBuilde
         final TableInfo _infoExcursions = new TableInfo("excursions", _columnsExcursions, _foreignKeysExcursions, _indicesExcursions);
         final TableInfo _existingExcursions = TableInfo.read(db, "excursions");
         if (!_infoExcursions.equals(_existingExcursions)) {
-          return new RoomOpenHelper.ValidationResult(false, "excursions(com.example.vacations.entities.Excursion).\n"
+          return new RoomOpenHelper.ValidationResult(false, "excursions(com.example.oe.entities.Excursion).\n"
                   + " Expected:\n" + _infoExcursions + "\n"
                   + " Found:\n" + _existingExcursions);
         }

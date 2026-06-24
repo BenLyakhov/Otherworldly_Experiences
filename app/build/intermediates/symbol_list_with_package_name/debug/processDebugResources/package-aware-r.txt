@@ -1,4 +1,4 @@
-com.example.vacations
+com.example.oe
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -476,6 +476,24 @@ attr customNavigationLayout
 attr customPixelDimension
 attr customReference
 attr customStringValue
+attr cv_daySize
+attr cv_dayViewResource
+attr cv_monthColumns
+attr cv_monthFooterResource
+attr cv_monthHeaderResource
+attr cv_monthHeight
+attr cv_monthHorizontalSpacing
+attr cv_monthVerticalSpacing
+attr cv_monthViewClass
+attr cv_orientation
+attr cv_outDateStyle
+attr cv_scrollPaged
+attr cv_weekFooterResource
+attr cv_weekHeaderResource
+attr cv_weekViewClass
+attr cv_yearFooterResource
+attr cv_yearHeaderResource
+attr cv_yearViewClass
 attr damping
 attr dayInvalidStyle
 attr daySelectedStyle
@@ -3761,6 +3779,7 @@ id bounceStart
 id button
 id buttonPanel
 id cache_measures
+id calendarview
 id callMeasure
 id cancel_button
 id carryVelocity
@@ -3837,6 +3856,8 @@ id edit_text_id
 id elastic
 id embed
 id end
+id endOfGrid
+id endOfRow
 id endToStart
 id endvacadate
 id enterAlways
@@ -3869,8 +3890,10 @@ id flip
 id floating
 id floatingActionButton
 id floatingActionButton2
+id followDaySize
 id forever
 id fragment_container_view_tag
+id freeForm
 id frost
 id fullscreen_header
 id ghost_view
@@ -4049,6 +4072,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rectangle
 id rectangles
 id recyclerView
 id report_drawn
@@ -4083,6 +4107,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id seventhWidth
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -5848,6 +5873,7 @@ styleable BottomAppBar addElevationShadow backgroundTint elevation fabAlignmentM
 styleable BottomNavigationView android_minHeight compatShadowEnabled itemHorizontalTranslationEnabled shapeAppearance shapeAppearanceOverlay
 styleable BottomSheetBehavior_Layout android_maxWidth android_maxHeight android_elevation backgroundTint behavior_draggable behavior_draggableOnNestedScroll behavior_expandedOffset behavior_fitToContents behavior_halfExpandedRatio behavior_hideable behavior_peekHeight behavior_saveFlags behavior_significantVelocityThreshold behavior_skipCollapsed gestureInsetBottomIgnored marginLeftSystemWindowInsets marginRightSystemWindowInsets marginTopSystemWindowInsets paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets paddingTopSystemWindowInsets shapeAppearance shapeAppearanceOverlay shouldRemoveExpandedCorners
 styleable ButtonBarLayout allowStacking
+styleable CalendarView cv_daySize cv_dayViewResource cv_monthFooterResource cv_monthHeaderResource cv_monthViewClass cv_orientation cv_outDateStyle cv_scrollPaged
 styleable Capability queryPatterns shortcutMatchRequired
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Carousel carousel_alignment carousel_backwardTransition carousel_emptyViewsBehavior carousel_firstView carousel_forwardTransition carousel_infinite carousel_nextState carousel_previousState carousel_touchUpMode carousel_touchUp_dampeningFactor carousel_touchUp_velocityThreshold
@@ -5982,6 +6008,8 @@ styleable ViewBackgroundHelper android_background backgroundTint backgroundTintM
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
+styleable WeekCalendarView cv_daySize cv_dayViewResource cv_scrollPaged cv_weekFooterResource cv_weekHeaderResource cv_weekViewClass
+styleable YearCalendarView cv_daySize cv_dayViewResource cv_monthColumns cv_monthFooterResource cv_monthHeaderResource cv_monthHeight cv_monthHorizontalSpacing cv_monthVerticalSpacing cv_monthViewClass cv_orientation cv_outDateStyle cv_scrollPaged cv_yearFooterResource cv_yearHeaderResource cv_yearViewClass
 styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
