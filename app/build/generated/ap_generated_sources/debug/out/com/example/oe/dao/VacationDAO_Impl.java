@@ -259,6 +259,72 @@ public final class VacationDAO_Impl implements VacationDAO {
     }
   }
 
+  @Override
+  public List<Vacation> getVacationBySearch(final String search) {
+    final String _sql = "SELECT * FROM VACATIONS WHERE ? = '' OR vacationName LIKE '%' || ? || '%' ORDER BY vacationName ASC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
+    int _argIndex = 1;
+    if (search == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, search);
+    }
+    _argIndex = 2;
+    if (search == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, search);
+    }
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfVacationID = CursorUtil.getColumnIndexOrThrow(_cursor, "vacationID");
+      final int _cursorIndexOfVacationName = CursorUtil.getColumnIndexOrThrow(_cursor, "vacationName");
+      final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+      final int _cursorIndexOfHotelName = CursorUtil.getColumnIndexOrThrow(_cursor, "hotelName");
+      final int _cursorIndexOfStartVacaDate = CursorUtil.getColumnIndexOrThrow(_cursor, "startVacaDate");
+      final int _cursorIndexOfEndVacaDate = CursorUtil.getColumnIndexOrThrow(_cursor, "endVacaDate");
+      final List<Vacation> _result = new ArrayList<Vacation>(_cursor.getCount());
+      while (_cursor.moveToNext()) {
+        final Vacation _item;
+        final int _tmpVacationID;
+        _tmpVacationID = _cursor.getInt(_cursorIndexOfVacationID);
+        final String _tmpVacationName;
+        if (_cursor.isNull(_cursorIndexOfVacationName)) {
+          _tmpVacationName = null;
+        } else {
+          _tmpVacationName = _cursor.getString(_cursorIndexOfVacationName);
+        }
+        final double _tmpPrice;
+        _tmpPrice = _cursor.getDouble(_cursorIndexOfPrice);
+        final String _tmpHotelName;
+        if (_cursor.isNull(_cursorIndexOfHotelName)) {
+          _tmpHotelName = null;
+        } else {
+          _tmpHotelName = _cursor.getString(_cursorIndexOfHotelName);
+        }
+        final String _tmpStartVacaDate;
+        if (_cursor.isNull(_cursorIndexOfStartVacaDate)) {
+          _tmpStartVacaDate = null;
+        } else {
+          _tmpStartVacaDate = _cursor.getString(_cursorIndexOfStartVacaDate);
+        }
+        final String _tmpEndVacaDate;
+        if (_cursor.isNull(_cursorIndexOfEndVacaDate)) {
+          _tmpEndVacaDate = null;
+        } else {
+          _tmpEndVacaDate = _cursor.getString(_cursorIndexOfEndVacaDate);
+        }
+        _item = new Vacation(_tmpVacationID,_tmpVacationName,_tmpPrice,_tmpHotelName,_tmpStartVacaDate,_tmpEndVacaDate);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
   @NonNull
   public static List<Class<?>> getRequiredConverters() {
     return Collections.emptyList();

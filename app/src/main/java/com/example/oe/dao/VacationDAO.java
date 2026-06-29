@@ -24,4 +24,9 @@ public interface VacationDAO {
 
     @Query("SELECT * FROM VACATIONS WHERE vacationID = :id Limit 1")
     Vacation getVacationByID(int id);
+
+    //    adding the following query for the search function in activity_vacation_list
+    @Query("SELECT * FROM VACATIONS WHERE :search = '' OR vacationName LIKE '%' || :search || '%' ORDER BY vacationName ASC")
+    List<Vacation> getVacationBySearch(String search);
+
 }

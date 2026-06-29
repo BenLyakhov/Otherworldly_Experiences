@@ -16,6 +16,7 @@ id excursiondelete
 id excursionnotify
 id excursionsave
 id excursionshare
+id export
 id floatingActionButton
 id floatingActionButton2
 id hotel
@@ -29,6 +30,7 @@ id price
 id priceText
 id recyclerView
 id scrollView
+id search_bar
 id spinner
 id startvacadate
 id textView

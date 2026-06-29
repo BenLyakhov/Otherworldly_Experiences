@@ -13,8 +13,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.SearchView;
 
 import com.example.oe.R;
+import com.example.oe.dao.VacationDAO;
 import com.example.oe.database.Repository;
 import com.example.oe.entities.Vacation;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -30,15 +32,13 @@ public class VacationList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_vacation_list);
+
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(VacationList.this, VacationDetails.class);
-                // Product list is where you are at, ProductDetails is where you want to go
-//                intent.putExtra("test", "information sent");
                 startActivity(intent);
-
             }
         });
 
@@ -50,9 +50,23 @@ public class VacationList extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         vacationAdapter.setVacations(allVacations); // this line is from VacationAdapter.java, line 85
 
-//        System.out.println(getIntent().getStringExtra("test")); // this line makes the button work
-//        Commented out the above system.out line when I put in the recycler view (see video 3, at 51:56)
-        // the button which was added in MainActivity.java, lines 20 to 31, which is the button added in the activity_main.xml UI/simulator
+//        adding search view stuff in the onCreate function
+        SearchView searchView = findViewById(R.id.search_bar);
+        searchView.setIconifiedByDefault(false);
+        searchView.setQueryHint("Search Vacation Here");
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                loadVacations(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                loadVacations(newText);
+                return true;
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -75,6 +89,15 @@ public class VacationList extends AppCompatActivity {
         recyclerView.setAdapter(vacationAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         vacationAdapter.setVacations(allVacations);
+    }
+
+    private void loadVacations(String query) {
+        List<Vacation> searchedVacations = repository.getVacationBySearch(query == null ? "" : query);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView); // recyclerview is the already existing list of vacations
+        final VacationAdapter vacationAdapter = new VacationAdapter(this);
+        recyclerView.setAdapter(vacationAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        vacationAdapter.setVacations(searchedVacations);
     }
 
     @Override
@@ -103,6 +126,9 @@ public class VacationList extends AppCompatActivity {
 //
 //        }
 
+        if(item.getItemId()==R.id.export) {
+            repository.getmAllVacations();
+        }
         if(item.getItemId()==android.R.id.home){
             this.finish(); // this part makes the back arrow work to the previous page. can program it to go somewhere else
 //          android.parentActivityName is what you link the back arrow to when on that page, in AndroidManifest
