@@ -5,9 +5,11 @@ color white
 drawable baseline_add_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id Excursion_title_in_vaca_details
 id button
-id calendarview
 id column_names
+id editTextEmailAddress
+id editTextPassword
 id endvacadate
 id excursionName
 id excursionPrice
@@ -50,7 +52,9 @@ id textView4
 id textView5
 id textView6
 id titleText
+id vaca_details_linear_layout
 id vacation
+id vacation_header
 id vacationdelete
 id vacationnotify
 id vacationsave

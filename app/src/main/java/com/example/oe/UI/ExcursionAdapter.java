@@ -68,23 +68,20 @@ public class ExcursionAdapter extends RecyclerView.Adapter<ExcursionAdapter.Excu
         return new ExcursionViewHolder(itemView);
     }
 
-//    @NonNull
-//    @Override
-//    public ExcursionAdapter.ExcursionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        return null;
-//    }
 
     @Override
     public void onBindViewHolder(@NonNull ExcursionAdapter.ExcursionViewHolder holder, int position) {
         if(mExcursions!=null){
             Excursion current=mExcursions.get(position);
             String name=current.getExcursionName();
-            int vacaID=current.getVacationID();
+//            int vacaID=current.getVacationID();
+            String excursionDate = current.getExcursionDate();
             holder.excursionItemView.setText(name);
-            holder.excursionItemView2.setText(Integer.toString(vacaID));
+//            holder.excursionItemView2.setText(Integer.toString(vacaID));
+            holder.excursionItemView2.setText(excursionDate);
         } else {
             holder.excursionItemView.setText("No excursion name");
-            holder.excursionItemView.setText("No vacation ID");
+            holder.excursionItemView.setText("No excursion date");
         }
     }
 

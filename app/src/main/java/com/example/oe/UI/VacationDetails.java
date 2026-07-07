@@ -314,21 +314,6 @@ public class VacationDetails extends AppCompatActivity {
                 share.putExtra(Intent.EXTRA_SUBJECT, "Vacation: " + title);
                 startActivity(Intent.createChooser(share, "Share vacation via"));
 
-
-
-//                repository.getAssociatedExcursions(vacationID);
-
-
-//                    if (excursions != null && !excursions.empty()) {
-//                        vacationDetailsShareText.append("\n\nExcursions:");
-//                        for (com.wgu.d308.entities.Excursion excursion : excursions) {
-//                            vacationDetailsShareText.append("\n- ").append(excursion.getTitle())
-//                                    .append(" (").append(excursion.getDate()).append(")");
-//                        }
-//                    }
-
-
-
                 return true;
             }
 
@@ -361,10 +346,6 @@ public class VacationDetails extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
         } // end public boolean onOptionsItemSelected
 
-    public void saveVacation() { //this is to try to save the vacation dates correctly. What i've been doing in the menu function
-//        is not working
-
-    }
 
 //        The following is the code found in VacationList.java. per video 4, this is supposed to be in
 //    VacationDetail.java. I'll leave it in both areas for now, see if it breaks anything.

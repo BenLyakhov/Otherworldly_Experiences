@@ -3675,6 +3675,7 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Excursion_title_in_vaca_details
 id FUNCTION
 id META
 id NO_DEBUG
@@ -3779,7 +3780,6 @@ id bounceStart
 id button
 id buttonPanel
 id cache_measures
-id calendarview
 id callMeasure
 id cancel_button
 id carryVelocity
@@ -3852,6 +3852,8 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editTextEmailAddress
+id editTextPassword
 id edit_query
 id edit_text_id
 id elastic
@@ -4222,7 +4224,9 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id vaca_details_linear_layout
 id vacation
+id vacation_header
 id vacationdelete
 id vacationnotify
 id vacationsave

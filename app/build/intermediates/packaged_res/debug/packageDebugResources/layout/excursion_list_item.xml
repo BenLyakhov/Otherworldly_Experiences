@@ -22,6 +22,7 @@
         android:layout_marginTop="5dp"
         android:text="TextView"
         android:textSize="20sp"
+        android:gravity="right"
         app:layout_constraintLeft_toRightOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="parent" />
 
