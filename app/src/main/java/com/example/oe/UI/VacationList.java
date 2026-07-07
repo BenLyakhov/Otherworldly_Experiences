@@ -16,11 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.SearchView;
 
 import com.example.oe.R;
-import com.example.oe.dao.VacationDAO;
 import com.example.oe.database.Repository;
 import com.example.oe.entities.Vacation;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.kizitonwose.calendar.view.CalendarView;
 
 import java.util.List;
 
@@ -126,8 +124,10 @@ public class VacationList extends AppCompatActivity {
 //
 //        }
 
-        if(item.getItemId()==R.id.export) {
-            repository.getmAllVacations();
+        if(item.getItemId()==R.id.report) {
+            Intent intent = new Intent(VacationList.this, Report.class);
+            startActivity(intent);
+            return true;
         }
         if(item.getItemId()==android.R.id.home){
             this.finish(); // this part makes the back arrow work to the previous page. can program it to go somewhere else

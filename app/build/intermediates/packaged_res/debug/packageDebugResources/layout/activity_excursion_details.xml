@@ -53,17 +53,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:layout_margin="2dp"
-                android:text="Note" />
-
-            <EditText
-                android:id="@+id/note"
-                android:layout_width="200dp"
-                android:layout_height="match_parent" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -85,10 +74,5 @@
                 android:hint="select date"
                 android:inputType="none" />
         </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.constraintlayout.widget.ConstraintLayout>

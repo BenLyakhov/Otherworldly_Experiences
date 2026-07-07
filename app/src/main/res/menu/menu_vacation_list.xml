@@ -2,8 +2,8 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Export All Vacations"
-          android:id="@+id/export"/>
+    <item android:title="Vacations Report"
+          android:id="@+id/report"/>
     <item android:title="Add Sample Code"
           android:id="@+id/mysample"/>
     <item android:title="Item"

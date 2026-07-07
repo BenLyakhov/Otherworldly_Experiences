@@ -7,9 +7,11 @@ import com.example.oe.dao.VacationDAO;
 import com.example.oe.entities.Excursion;
 import com.example.oe.entities.Vacation;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 
 // all the code here is from Part 2 of the panopto video series
@@ -42,17 +44,35 @@ public class Repository {
         return mAllVacations;
     }
 
-    public List<Vacation>getVacationBySearch(String search){
-        databaseExecutor.execute(() -> {
-            mAllVacations= mVacationDAO.getVacationBySearch(search);
-        });
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        return mAllVacations;
+//    public List<Vacation>getVacationBySearch(String search){
+//        databaseExecutor.execute(() -> {
+//            mAllVacations= mVacationDAO.getVacationBySearch(search);
+//        });
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+////            throw new RuntimeException(e);
+//                e.printStackTrace();
+//        }
+//        return mAllVacations;
+//    }
+
+//  The above getVacationBySearch function seems to not be loading all the vacations in the report
+//  currently, on the first line gets loaded
+//  rewriting the function so that all the data loads
+
+public List<Vacation> getVacationBySearch(String search) {
+    Future<List<Vacation>> future = databaseExecutor.submit(() ->
+            mVacationDAO.getVacationBySearch(search)
+            );
+    try {
+        return future.get();
+    } catch (Exception e) {
+        e.printStackTrace();
+        return new ArrayList<>();
     }
+//    return new ArrayList<>();
+}
 
     public Vacation getVacationByID(int id) {
         return  mVacationDAO.getVacationByID(id);
@@ -159,4 +179,30 @@ public List<Excursion>getAssociatedExcursions(int vacationID){
     public Excursion getExcursionByID(int excursionID) {
         return mExcursionDAO.getExcursionByID(excursionID);
     }
+
+//    public List<Excursion> getExcursionBySearch(String search) {
+//        databaseExecutor.execute(() -> {
+//            mAllExcursions= mExcursionDAO.getExcursionBySearch(search);
+//        });
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+////            throw new RuntimeException(e);
+//            e.printStackTrace();
+//        }
+//        return mAllExcursions;
+//    }
+
+    public List<Excursion> getExcursionBySearch(String search) {
+    Future<List<Excursion>> future = databaseExecutor.submit(() ->
+            mExcursionDAO.getExcursionBySearch(search)
+            );
+    try {
+        return future.get();
+    } catch (Exception e) {
+        e.printStackTrace();
+        return new ArrayList<>();
+    }
+//    return new ArrayList<>();
+}
 }

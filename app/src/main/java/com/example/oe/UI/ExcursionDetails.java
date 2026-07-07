@@ -39,7 +39,7 @@ public class ExcursionDetails extends AppCompatActivity {
     int vacationID;
     EditText editName;
     EditText editPrice;
-    EditText editNote;
+//    EditText editNote;
     TextView editDate;
     Date excDateDate;
     Date vacaStartDate;
@@ -81,7 +81,7 @@ public class ExcursionDetails extends AppCompatActivity {
         vacaStartDateString = getIntent().getStringExtra("startVacationDate");
         vacaEndDateString = getIntent().getStringExtra("endVacationDate");
 
-        editNote = findViewById(R.id.note);
+//        editNote = findViewById(R.id.note); // I don't do anything with this. removing
 
         excursionDateString = getIntent().getStringExtra("excursionDate");
         editDate = findViewById(R.id.excursiondate); // ID in xml file
@@ -100,11 +100,12 @@ public class ExcursionDetails extends AppCompatActivity {
         };
 
 //   video 4, timestamp 1:31:49, spinner
-        Spinner spinner=findViewById(R.id.spinner);
-        ArrayList<Vacation> vacationArrayList=new ArrayList<>();
-        vacationArrayList.addAll(repository.getmAllVacations());
-        ArrayAdapter<Vacation>vacationAdapter=new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,vacationArrayList);
-        spinner.setAdapter(vacationAdapter);
+//        for D424, removing spinner code. I don't use this anywhere else, unnecessary
+//        Spinner spinner=findViewById(R.id.spinner);
+//        ArrayList<Vacation> vacationArrayList=new ArrayList<>();
+//        vacationArrayList.addAll(repository.getmAllVacations());
+//        ArrayAdapter<Vacation>vacationAdapter=new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,vacationArrayList);
+//        spinner.setAdapter(vacationAdapter);
 
 //        Moving these 2 lines in the onDateSet method:
         String myFormat = "MM/dd/yy";

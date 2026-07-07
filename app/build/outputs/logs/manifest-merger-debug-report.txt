@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:2:1-47:12
+ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:2:1-52:12
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\372732a494fdb21414555b3ddf4b50a6\transformed\material-1.13.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\03301e77d958d7a6adc85b2fd17c384f\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\bb716bd6943a9da165025ddfa1690ccb\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:2:1-7:12
@@ -63,8 +63,8 @@ ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\
 	android:name
 		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:5:22-74
 application
-ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:6:5-45:19
-INJECTED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:6:5-45:19
+ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:6:5-50:19
+INJECTED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:6:5-50:19
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\372732a494fdb21414555b3ddf4b50a6\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\372732a494fdb21414555b3ddf4b50a6\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\03301e77d958d7a6adc85b2fd17c384f\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
@@ -141,24 +141,34 @@ ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\
 		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:32:13-37
 	android:name
 		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:31:13-44
-activity#com.example.oe.UI.MainActivity
-ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:35:9-44:20
+activity#com.example.oe.UI.Report
+ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:35:9-39:61
+	android:parentActivityName
+		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:39:13-58
 	android:label
-		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:38:13-42
+		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:38:13-35
 	android:exported
-		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:37:13-36
+		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:37:13-37
 	android:name
-		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:36:13-44
+		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:36:13-38
+activity#com.example.oe.UI.MainActivity
+ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:40:9-49:20
+	android:label
+		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:43:13-42
+	android:exported
+		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:42:13-36
+	android:name
+		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:41:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:39:13-43:29
+ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:44:13-48:29
 action#android.intent.action.MAIN
-ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:40:17-69
+ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:45:17-69
 	android:name
-		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:40:25-66
+		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:45:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:42:17-77
+ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:17-77
 	android:name
-		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:42:27-74
+		ADDED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:27-74
 uses-sdk
 INJECTED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml

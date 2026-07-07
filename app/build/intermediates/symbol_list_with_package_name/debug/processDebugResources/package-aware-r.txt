@@ -3801,6 +3801,7 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id column_names
 id compress
 id confirm_button
 id constraint
@@ -3875,7 +3876,6 @@ id excursionshare
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id export
 id fade
 id fill
 id fill_horizontal
@@ -4024,7 +4024,6 @@ id noState
 id none
 id normal
 id north
-id note
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -4076,7 +4075,21 @@ id ratio
 id rectangle
 id rectangles
 id recyclerView
+id report
+id report_column_end
+id report_column_excursion_count
+id report_column_hotel
+id report_column_name
+id report_column_start
 id report_drawn
+id report_excursion_count
+id report_recycler_view
+id report_search_excursion
+id report_search_vacation
+id report_vacation_end
+id report_vacation_hotel
+id report_vacation_name
+id report_vacation_start
 id retreat
 id reverseSawtooth
 id right
@@ -4126,7 +4139,6 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
-id spinner
 id spline
 id split_action_bar
 id spread
@@ -4354,6 +4366,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_excursion_details
 layout activity_main
+layout activity_report
 layout activity_vacation_details
 layout activity_vacation_list
 layout custom_dialog
@@ -4434,6 +4447,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout report_list_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

@@ -264,6 +264,61 @@ public final class ExcursionDAO_Impl implements ExcursionDAO {
     }
   }
 
+  @Override
+  public List<Excursion> getExcursionBySearch(final String search) {
+    final String _sql = "SELECT * FROM EXCURSIONS WHERE ? = '' OR excursionName LIKE '%' || ? || '%' ORDER BY excursionName ASC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
+    int _argIndex = 1;
+    if (search == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, search);
+    }
+    _argIndex = 2;
+    if (search == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, search);
+    }
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfExcursionID = CursorUtil.getColumnIndexOrThrow(_cursor, "excursionID");
+      final int _cursorIndexOfExcursionName = CursorUtil.getColumnIndexOrThrow(_cursor, "excursionName");
+      final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+      final int _cursorIndexOfVacationID = CursorUtil.getColumnIndexOrThrow(_cursor, "vacationID");
+      final int _cursorIndexOfExcursionDate = CursorUtil.getColumnIndexOrThrow(_cursor, "excursionDate");
+      final List<Excursion> _result = new ArrayList<Excursion>(_cursor.getCount());
+      while (_cursor.moveToNext()) {
+        final Excursion _item;
+        final int _tmpExcursionID;
+        _tmpExcursionID = _cursor.getInt(_cursorIndexOfExcursionID);
+        final String _tmpExcursionName;
+        if (_cursor.isNull(_cursorIndexOfExcursionName)) {
+          _tmpExcursionName = null;
+        } else {
+          _tmpExcursionName = _cursor.getString(_cursorIndexOfExcursionName);
+        }
+        final double _tmpPrice;
+        _tmpPrice = _cursor.getDouble(_cursorIndexOfPrice);
+        final int _tmpVacationID;
+        _tmpVacationID = _cursor.getInt(_cursorIndexOfVacationID);
+        final String _tmpExcursionDate;
+        if (_cursor.isNull(_cursorIndexOfExcursionDate)) {
+          _tmpExcursionDate = null;
+        } else {
+          _tmpExcursionDate = _cursor.getString(_cursorIndexOfExcursionDate);
+        }
+        _item = new Excursion(_tmpExcursionID,_tmpExcursionName,_tmpPrice,_tmpVacationID,_tmpExcursionDate);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
   @NonNull
   public static List<Class<?>> getRequiredConverters() {
     return Collections.emptyList();

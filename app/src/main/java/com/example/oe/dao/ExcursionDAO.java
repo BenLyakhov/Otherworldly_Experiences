@@ -28,4 +28,7 @@ public interface ExcursionDAO {
 
     @Query("SELECT * FROM excursions WHERE excursionID = :id")
     Excursion getExcursionByID(int id);
+
+    @Query("SELECT * FROM EXCURSIONS WHERE :search = '' OR excursionName LIKE '%' || :search || '%' ORDER BY excursionName ASC")
+    List<Excursion> getExcursionBySearch(String search);
 }
