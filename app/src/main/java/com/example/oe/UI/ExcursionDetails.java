@@ -221,8 +221,8 @@ public class ExcursionDetails extends AppCompatActivity {
 //            This part is taken care of in Task B3F, sharing all vacation details.
             Intent sentIntent= new Intent();
             sentIntent.setAction(Intent.ACTION_SEND);
-            sentIntent.putExtra(Intent.EXTRA_TEXT, editName.getText().toString()+ "EXTRA_TEXT");
-            sentIntent.putExtra(Intent.EXTRA_TITLE, editDate.getText().toString()+ "EXTRA_TITLE");
+            sentIntent.putExtra(Intent.EXTRA_TEXT, editName.getText().toString());
+            sentIntent.putExtra(Intent.EXTRA_TITLE, editDate.getText().toString());
             sentIntent.setType("text/plain");
             Intent shareIntent=Intent.createChooser(sentIntent,null);
             startActivity(shareIntent);

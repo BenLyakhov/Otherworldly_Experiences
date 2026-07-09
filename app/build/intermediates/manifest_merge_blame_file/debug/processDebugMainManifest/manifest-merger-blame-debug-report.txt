@@ -13,182 +13,247 @@
 11-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:5:22-74
 12
 13    <permission
-13-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\6b58c6b94b6b03146c5f6c413a6fdef4\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+13-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\3d995e8a05b06d88e276cc40cd938f87\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
 14        android:name="com.example.vacations.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\6b58c6b94b6b03146c5f6c413a6fdef4\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+14-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\3d995e8a05b06d88e276cc40cd938f87\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
 15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\6b58c6b94b6b03146c5f6c413a6fdef4\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+15-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\3d995e8a05b06d88e276cc40cd938f87\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
 16
 17    <uses-permission android:name="com.example.vacations.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\6b58c6b94b6b03146c5f6c413a6fdef4\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\6b58c6b94b6b03146c5f6c413a6fdef4\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
-18
-19    <application
-19-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:6:5-50:19
-20        android:allowBackup="true"
-20-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:7:9-35
-21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\6b58c6b94b6b03146c5f6c413a6fdef4\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
-22        android:dataExtractionRules="@xml/data_extraction_rules"
-22-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:8:9-65
-23        android:debuggable="true"
-24        android:extractNativeLibs="false"
-25        android:fullBackupContent="@xml/backup_rules"
-25-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:9:9-54
-26        android:icon="@mipmap/ic_launcher"
-26-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:10:9-43
-27        android:label="@string/app_name"
-27-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:11:9-41
-28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:12:9-54
-29        android:supportsRtl="true"
-29-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:13:9-35
-30        android:testOnly="true"
-31        android:theme="@style/Theme.Vacations" >
-31-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:14:9-47
-32        <receiver
-32-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:15:9-18:48
-33            android:name="com.example.oe.UI.MyReceiver"
-33-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:16:13-42
-34            android:enabled="true"
-34-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:17:13-35
-35            android:exported="true" />
-35-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:18:13-36
-36
-37        <activity
-37-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:20:9-24:64
-38            android:name="com.example.oe.UI.ExcursionDetails"
-38-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:21:13-48
-39            android:exported="false"
-39-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:22:13-37
-40            android:label="Excursion Details"
-40-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:23:13-46
-41            android:parentActivityName="com.example.oe.UI.VacationDetails" />
-41-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:24:13-61
-42        <activity
-42-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:25:9-29:61
-43            android:name="com.example.oe.UI.VacationDetails"
-43-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:26:13-47
-44            android:exported="false"
-44-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:27:13-37
-45            android:label="Vacation Details and Excursion List"
-45-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:28:13-64
-46            android:parentActivityName="com.example.oe.UI.VacationList" />
-46-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:29:13-58
-47        <activity
-47-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:30:9-34:61
-48            android:name="com.example.oe.UI.VacationList"
-48-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:31:13-44
-49            android:exported="false"
-49-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:32:13-37
-50            android:label="Vacation List"
-50-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:33:13-42
-51            android:parentActivityName="com.example.oe.UI.MainActivity" />
-51-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:34:13-58
-52        <activity
-52-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:35:9-39:61
-53            android:name="com.example.oe.UI.Report"
-53-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:36:13-38
-54            android:exported="false"
-54-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:37:13-37
-55            android:label="Report"
-55-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:38:13-35
-56            android:parentActivityName="com.example.oe.UI.VacationList" />
-56-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:39:13-58
-57        <activity
-57-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:40:9-49:20
-58            android:name="com.example.oe.UI.MainActivity"
-58-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:41:13-44
-59            android:exported="true"
-59-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:42:13-36
-60            android:label="Main Activity" >
-60-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:43:13-42
-61            <intent-filter>
-61-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:44:13-48:29
-62                <action android:name="android.intent.action.MAIN" />
-62-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:45:17-69
-62-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:45:25-66
-63
-64                <category android:name="android.intent.category.LAUNCHER" />
-64-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:17-77
-64-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:27-74
-65            </intent-filter>
-66        </activity>
-67
-68        <service
-68-->[androidx.room:room-runtime:2.6.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\6b35455247c4e85e5604c113187598d9\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
-69            android:name="androidx.room.MultiInstanceInvalidationService"
-69-->[androidx.room:room-runtime:2.6.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\6b35455247c4e85e5604c113187598d9\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
-70            android:directBootAware="true"
-70-->[androidx.room:room-runtime:2.6.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\6b35455247c4e85e5604c113187598d9\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
-71            android:exported="false" />
-71-->[androidx.room:room-runtime:2.6.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\6b35455247c4e85e5604c113187598d9\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
-72
-73        <provider
-73-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\a649c509ef7dec7d11893fe7a5e1b493\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-74            android:name="androidx.startup.InitializationProvider"
-74-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\a649c509ef7dec7d11893fe7a5e1b493\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-75            android:authorities="com.example.vacations.androidx-startup"
-75-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\a649c509ef7dec7d11893fe7a5e1b493\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-76            android:exported="false" >
-76-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\a649c509ef7dec7d11893fe7a5e1b493\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-77            <meta-data
-77-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\a649c509ef7dec7d11893fe7a5e1b493\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-78                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-78-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\a649c509ef7dec7d11893fe7a5e1b493\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-79                android:value="androidx.startup" />
-79-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\a649c509ef7dec7d11893fe7a5e1b493\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-80            <meta-data
-80-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\BLyak\.gradle\caches\8.13\transforms\3bc814feac064cc6d219d1c12d310dcd\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-81                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-81-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\BLyak\.gradle\caches\8.13\transforms\3bc814feac064cc6d219d1c12d310dcd\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-82                android:value="androidx.startup" />
-82-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\BLyak\.gradle\caches\8.13\transforms\3bc814feac064cc6d219d1c12d310dcd\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-83            <meta-data
-83-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
-84                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-84-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
-85                android:value="androidx.startup" />
-85-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
-86        </provider>
-87
-88        <receiver
-88-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
-89            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-89-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
-90            android:directBootAware="false"
-90-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
-91            android:enabled="true"
-91-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
-92            android:exported="true"
-92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
-93            android:permission="android.permission.DUMP" >
-93-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
-94            <intent-filter>
-94-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
-95                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
-95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
-96            </intent-filter>
-97            <intent-filter>
-97-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
-98                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
-98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
-99            </intent-filter>
-100            <intent-filter>
-100-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
-101                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
-101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
-102            </intent-filter>
-103            <intent-filter>
-103-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
-104                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-104-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
-104-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\fc9db33af19cf33bbe844c7da21d86af\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
-105            </intent-filter>
-106        </receiver>
-107    </application>
-108
-109</manifest>
+17-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\3d995e8a05b06d88e276cc40cd938f87\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\3d995e8a05b06d88e276cc40cd938f87\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+18    <uses-permission android:name="android.permission.REORDER_TASKS" />
+18-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:24:5-72
+18-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:24:22-69
+19
+20    <queries>
+20-->[androidx.test:runner:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\45a75e1e9aa7ffbc7a37518e00248a6b\transformed\runner-1.7.0\AndroidManifest.xml:24:5-28:15
+21        <package android:name="androidx.test.orchestrator" />
+21-->[androidx.test:runner:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\45a75e1e9aa7ffbc7a37518e00248a6b\transformed\runner-1.7.0\AndroidManifest.xml:25:9-62
+21-->[androidx.test:runner:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\45a75e1e9aa7ffbc7a37518e00248a6b\transformed\runner-1.7.0\AndroidManifest.xml:25:18-59
+22        <package android:name="androidx.test.services" />
+22-->[androidx.test:runner:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\45a75e1e9aa7ffbc7a37518e00248a6b\transformed\runner-1.7.0\AndroidManifest.xml:26:9-58
+22-->[androidx.test:runner:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\45a75e1e9aa7ffbc7a37518e00248a6b\transformed\runner-1.7.0\AndroidManifest.xml:26:18-55
+23        <package android:name="com.google.android.apps.common.testing.services" />
+23-->[androidx.test:runner:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\45a75e1e9aa7ffbc7a37518e00248a6b\transformed\runner-1.7.0\AndroidManifest.xml:27:9-83
+23-->[androidx.test:runner:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\45a75e1e9aa7ffbc7a37518e00248a6b\transformed\runner-1.7.0\AndroidManifest.xml:27:18-80
+24    </queries>
+25
+26    <application
+26-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:6:5-50:19
+27        android:allowBackup="true"
+27-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:7:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.13.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\3d995e8a05b06d88e276cc40cd938f87\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+29        android:dataExtractionRules="@xml/data_extraction_rules"
+29-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:8:9-65
+30        android:debuggable="true"
+31        android:extractNativeLibs="false"
+32        android:fullBackupContent="@xml/backup_rules"
+32-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:9:9-54
+33        android:icon="@mipmap/ic_launcher"
+33-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:10:9-43
+34        android:label="@string/app_name"
+34-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:11:9-41
+35        android:roundIcon="@mipmap/ic_launcher_round"
+35-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:12:9-54
+36        android:supportsRtl="true"
+36-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:13:9-35
+37        android:testOnly="true"
+38        android:theme="@style/Theme.Vacations" >
+38-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:14:9-47
+39        <receiver
+39-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:15:9-18:48
+40            android:name="com.example.oe.UI.MyReceiver"
+40-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:16:13-42
+41            android:enabled="true"
+41-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:17:13-35
+42            android:exported="true" />
+42-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:18:13-36
+43
+44        <activity
+44-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:20:9-24:64
+45            android:name="com.example.oe.UI.ExcursionDetails"
+45-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:21:13-48
+46            android:exported="false"
+46-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:22:13-37
+47            android:label="Excursion Details"
+47-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:23:13-46
+48            android:parentActivityName="com.example.oe.UI.VacationDetails" />
+48-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:24:13-61
+49        <activity
+49-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:25:9-29:61
+50            android:name="com.example.oe.UI.VacationDetails"
+50-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:26:13-47
+51            android:exported="false"
+51-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:27:13-37
+52            android:label="Vacation Details and Excursion List"
+52-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:28:13-64
+53            android:parentActivityName="com.example.oe.UI.VacationList" />
+53-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:29:13-58
+54        <activity
+54-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:30:9-34:61
+55            android:name="com.example.oe.UI.VacationList"
+55-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:31:13-44
+56            android:exported="false"
+56-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:32:13-37
+57            android:label="Vacation List"
+57-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:33:13-42
+58            android:parentActivityName="com.example.oe.UI.MainActivity" />
+58-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:34:13-58
+59        <activity
+59-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:35:9-39:61
+60            android:name="com.example.oe.UI.Report"
+60-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:36:13-38
+61            android:exported="false"
+61-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:37:13-37
+62            android:label="Report"
+62-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:38:13-35
+63            android:parentActivityName="com.example.oe.UI.VacationList" />
+63-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:39:13-58
+64        <activity
+64-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:40:9-49:20
+65            android:name="com.example.oe.UI.MainActivity"
+65-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:41:13-44
+66            android:exported="true"
+66-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:42:13-36
+67            android:label="Main Activity" >
+67-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:43:13-42
+68            <intent-filter>
+68-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:44:13-48:29
+69                <action android:name="android.intent.action.MAIN" />
+69-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:45:17-69
+69-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:45:25-66
+70
+71                <category android:name="android.intent.category.LAUNCHER" />
+71-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:17-77
+71-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:27-74
+72            </intent-filter>
+73        </activity>
+74
+75        <service
+75-->[androidx.room:room-runtime:2.6.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\ac0107ad0e87c9efd969bf9354c99bcc\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+76            android:name="androidx.room.MultiInstanceInvalidationService"
+76-->[androidx.room:room-runtime:2.6.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\ac0107ad0e87c9efd969bf9354c99bcc\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+77            android:directBootAware="true"
+77-->[androidx.room:room-runtime:2.6.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\ac0107ad0e87c9efd969bf9354c99bcc\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+78            android:exported="false" />
+78-->[androidx.room:room-runtime:2.6.1] C:\Users\BLyak\.gradle\caches\8.13\transforms\ac0107ad0e87c9efd969bf9354c99bcc\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+79
+80        <provider
+80-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\32034aefaf9eba91850808bde968cb25\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+81            android:name="androidx.startup.InitializationProvider"
+81-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\32034aefaf9eba91850808bde968cb25\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+82            android:authorities="com.example.vacations.androidx-startup"
+82-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\32034aefaf9eba91850808bde968cb25\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+83            android:exported="false" >
+83-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\32034aefaf9eba91850808bde968cb25\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+84            <meta-data
+84-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\32034aefaf9eba91850808bde968cb25\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+85                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+85-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\32034aefaf9eba91850808bde968cb25\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+86                android:value="androidx.startup" />
+86-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\32034aefaf9eba91850808bde968cb25\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+87            <meta-data
+87-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\BLyak\.gradle\caches\8.13\transforms\f9f429495956532bc7900536d9481347\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+88                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+88-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\BLyak\.gradle\caches\8.13\transforms\f9f429495956532bc7900536d9481347\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+89                android:value="androidx.startup" />
+89-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\BLyak\.gradle\caches\8.13\transforms\f9f429495956532bc7900536d9481347\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+90            <meta-data
+90-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+91                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+91-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+92                android:value="androidx.startup" />
+92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+93        </provider>
+94
+95        <activity
+95-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:27:9-34:20
+96            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+96-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:28:13-99
+97            android:exported="true"
+97-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:29:13-36
+98            android:theme="@style/WhiteBackgroundTheme" >
+98-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:30:13-56
+99            <intent-filter android:priority="-100" >
+99-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:31:13-33:29
+99-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:31:28-51
+100                <category android:name="android.intent.category.LAUNCHER" />
+100-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:17-77
+100-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:27-74
+101            </intent-filter>
+102        </activity>
+103        <activity
+103-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:35:9-42:20
+104            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+104-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:36:13-95
+105            android:exported="true"
+105-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:37:13-36
+106            android:theme="@style/WhiteBackgroundTheme" >
+106-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:38:13-56
+107            <intent-filter android:priority="-100" >
+107-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:31:13-33:29
+107-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:31:28-51
+108                <category android:name="android.intent.category.LAUNCHER" />
+108-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:17-77
+108-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:27-74
+109            </intent-filter>
+110        </activity>
+111        <activity
+111-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:43:9-50:20
+112            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+112-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:44:13-103
+113            android:exported="true"
+113-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:45:13-36
+114            android:theme="@style/WhiteBackgroundDialogTheme" >
+114-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:46:13-62
+115            <intent-filter android:priority="-100" >
+115-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:31:13-33:29
+115-->[androidx.test:core:1.7.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\AndroidManifest.xml:31:28-51
+116                <category android:name="android.intent.category.LAUNCHER" />
+116-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:17-77
+116-->D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\AndroidManifest.xml:47:27-74
+117            </intent-filter>
+118        </activity>
+119
+120        <receiver
+120-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+121            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+121-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+122            android:directBootAware="false"
+122-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+123            android:enabled="true"
+123-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+124            android:exported="true"
+124-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+125            android:permission="android.permission.DUMP" >
+125-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+126            <intent-filter>
+126-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+127                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+127-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+127-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+128            </intent-filter>
+129            <intent-filter>
+129-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+130                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+130-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+130-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+131            </intent-filter>
+132            <intent-filter>
+132-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+133                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+133-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+133-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+134            </intent-filter>
+135            <intent-filter>
+135-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+136                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+136-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+136-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+137            </intent-filter>
+138        </receiver>
+139    </application>
+140
+141</manifest>

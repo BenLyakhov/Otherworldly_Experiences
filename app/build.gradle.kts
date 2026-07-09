@@ -44,10 +44,17 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.recyclerview)
     implementation("com.kizitonwose.calendar:view:2.6.0")
+    implementation(libs.espresso.core)
+    implementation(libs.ext.junit)
+    implementation(libs.espresso.contrib)
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test:runner:1.5.2")
+    androidTestImplementation("androidx.test:rules:1.5.0")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
 //    Room Components
 //    These below are not working/not recognized in the current versions of the IDE.
 //    after these should be the correct ones that I got from reddit page for D308

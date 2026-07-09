@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.oe.app-mergeDebugResources-37:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "outputFile": "com.example.oe.app-mergeDebugResources-40:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\372732a494fdb21414555b3ddf4b50a6\\transformed\\material-1.13.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\9776fa3043800c21f7a2a760cfd29dcd\\transformed\\material-1.13.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

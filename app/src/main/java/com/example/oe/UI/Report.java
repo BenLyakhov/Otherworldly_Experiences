@@ -60,24 +60,24 @@ public class Report extends AppCompatActivity {
         });
 
         //        Same thing for excursion search bar
-        SearchView excursionSearch = findViewById(R.id.report_search_excursion);
-        excursionSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextChange(String query) {
-                if(!isReady) return true;
-                excursionQuery = query == null ? "" : query;
-                loadReport();
-                return true;
-            }
-
-            @Override
-            public boolean onQueryTextSubmit(String newText) {
-                if(!isReady) return true;
-                excursionQuery = newText == null ? "" : newText;
-                loadReport();
-                return true;
-            }
-        });
+//        SearchView excursionSearch = findViewById(R.id.report_search_excursion);
+//        excursionSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextChange(String query) {
+//                if(!isReady) return true;
+//                excursionQuery = query == null ? "" : query;
+//                loadReport();
+//                return true;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextSubmit(String newText) {
+//                if(!isReady) return true;
+//                excursionQuery = newText == null ? "" : newText;
+//                loadReport();
+//                return true;
+//            }
+//        });
 
         loadReport();
         isReady = true;
@@ -97,12 +97,6 @@ public class Report extends AppCompatActivity {
             List<Vacation> vacations = repository.getVacationBySearch(vacationQuery);
             List<Excursion> excursions = repository.getExcursionBySearch(excursionQuery);
 
-            Log.d("report debug", "Vacation count returned: " + (vacations != null ?vacations.size() : "null"));
-            if (vacations != null) {
-                for (Vacation vacation : vacations) {
-                    Log.d("report debug", "Vacation Found: " + vacation.getVacationName());
-                }
-            }
             List<ReportRow> rows = new ArrayList<>();
 
             for (Vacation vacation : vacations) { // getting excursions for specific vacation, searching by excursion
@@ -119,10 +113,6 @@ public class Report extends AppCompatActivity {
                 rows.add(new ReportRow(vacation, count));
             }
 
-            Log.d("report debug", "Row count sent to adapter: " + rows.size());
-            for(ReportRow row : rows) {
-                Log.d("report debug", "Row: " + row.getVacation().getVacationName());
-            }
             reportAdapter.setRows(rows);
     }
 }

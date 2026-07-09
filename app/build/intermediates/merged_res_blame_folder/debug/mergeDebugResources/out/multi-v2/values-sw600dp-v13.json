@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.oe.app-mergeDebugResources-37:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "com.example.oe.app-mergeDebugResources-40:/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\5212e104e100ba215cf2aeeeb7d4fc40\\transformed\\appcompat-1.7.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\88d2118ad2551a4ee4d9c23217b7a063\\transformed\\appcompat-1.7.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\372732a494fdb21414555b3ddf4b50a6\\transformed\\material-1.13.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\BLyak\\.gradle\\caches\\8.13\\transforms\\9776fa3043800c21f7a2a760cfd29dcd\\transformed\\material-1.13.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",

@@ -38,7 +38,6 @@ id report_column_name
 id report_column_start
 id report_excursion_count
 id report_recycler_view
-id report_search_excursion
 id report_search_vacation
 id report_vacation_end
 id report_vacation_hotel

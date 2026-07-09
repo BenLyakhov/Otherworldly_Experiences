@@ -122,7 +122,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="87dp"
+                    android:layout_width="92dp"
                     android:layout_height="50dp"
                     android:padding="10dp"
                     android:text="End Date: "
