@@ -1,0 +1,7 @@
+#Thu Jul 09 11:59:31 PDT 2026
+base.0=D\:\\WGU\\WGU docs\\D424 - Software Engineering Capstone\\OE\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+base.1=D\:\\WGU\\WGU docs\\D424 - Software Engineering Capstone\\OE\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
+path.0=classes.dex
+path.1=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

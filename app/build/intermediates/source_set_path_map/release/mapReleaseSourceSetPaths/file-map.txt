@@ -1,0 +1,46 @@
+com.example.oe.app-sqlite-framework-2.4.0-0 C:\Users\BLyak\.gradle\caches\8.13\transforms\0e8ae14035ad8b813ded26c7f07fa854\transformed\sqlite-framework-2.4.0\res
+com.example.oe.app-viewpager2-1.1.0-beta02-1 C:\Users\BLyak\.gradle\caches\8.13\transforms\14c7a8049a61b0b55265654a82ce9b3a\transformed\viewpager2-1.1.0-beta02\res
+com.example.oe.app-view-2.6.0-2 C:\Users\BLyak\.gradle\caches\8.13\transforms\17bcb4fab988279c0b0137a5a7272511\transformed\view-2.6.0\res
+com.example.oe.app-cardview-1.0.0-3 C:\Users\BLyak\.gradle\caches\8.13\transforms\1bf6cd3df83a9472709a6492d5528d8e\transformed\cardview-1.0.0\res
+com.example.oe.app-tracing-1.1.0-4 C:\Users\BLyak\.gradle\caches\8.13\transforms\27031d32765e961e8901540548d4f076\transformed\tracing-1.1.0\res
+com.example.oe.app-emoji2-1.3.0-5 C:\Users\BLyak\.gradle\caches\8.13\transforms\32034aefaf9eba91850808bde968cb25\transformed\emoji2-1.3.0\res
+com.example.oe.app-dynamicanimation-1.1.0-6 C:\Users\BLyak\.gradle\caches\8.13\transforms\329c370c70c76d7a1682d68165450456\transformed\dynamicanimation-1.1.0\res
+com.example.oe.app-emoji2-views-helper-1.3.0-7 C:\Users\BLyak\.gradle\caches\8.13\transforms\3af4d71e567ce61f4ce7b4a9dcd13ee9\transformed\emoji2-views-helper-1.3.0\res
+com.example.oe.app-core-1.13.1-8 C:\Users\BLyak\.gradle\caches\8.13\transforms\3d995e8a05b06d88e276cc40cd938f87\transformed\core-1.13.1\res
+com.example.oe.app-core-1.7.0-9 C:\Users\BLyak\.gradle\caches\8.13\transforms\494208a5d22fae17137573b26f6490db\transformed\core-1.7.0\res
+com.example.oe.app-drawerlayout-1.1.1-10 C:\Users\BLyak\.gradle\caches\8.13\transforms\57e050345a5b2ba94aa522a4429e0894\transformed\drawerlayout-1.1.1\res
+com.example.oe.app-lifecycle-viewmodel-savedstate-2.6.2-11 C:\Users\BLyak\.gradle\caches\8.13\transforms\5c7c4e03b19914dd214927e869f6f6b1\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
+com.example.oe.app-annotation-experimental-1.4.1-12 C:\Users\BLyak\.gradle\caches\8.13\transforms\69d17646d98207f1eae85a193170fc3c\transformed\annotation-experimental-1.4.1\res
+com.example.oe.app-profileinstaller-1.4.0-13 C:\Users\BLyak\.gradle\caches\8.13\transforms\6bcc878a13011ff4569843b96b2504ae\transformed\profileinstaller-1.4.0\res
+com.example.oe.app-lifecycle-runtime-2.6.2-14 C:\Users\BLyak\.gradle\caches\8.13\transforms\6d142c2b0e9dcd36d77929b55808ae2f\transformed\lifecycle-runtime-2.6.2\res
+com.example.oe.app-coordinatorlayout-1.1.0-15 C:\Users\BLyak\.gradle\caches\8.13\transforms\7b54333da5aa694c070926daf54078b4\transformed\coordinatorlayout-1.1.0\res
+com.example.oe.app-lifecycle-livedata-2.6.2-16 C:\Users\BLyak\.gradle\caches\8.13\transforms\885050f4a6d8f39c24960639588a6ba8\transformed\lifecycle-livedata-2.6.2\res
+com.example.oe.app-appcompat-1.7.1-17 C:\Users\BLyak\.gradle\caches\8.13\transforms\88d2118ad2551a4ee4d9c23217b7a063\transformed\appcompat-1.7.1\res
+com.example.oe.app-core-runtime-2.2.0-18 C:\Users\BLyak\.gradle\caches\8.13\transforms\8df44cdfc5c1fb4f0c16bdd0e9347319\transformed\core-runtime-2.2.0\res
+com.example.oe.app-graphics-shapes-release-19 C:\Users\BLyak\.gradle\caches\8.13\transforms\95699f06dd23bcbece71ee5fdf7085d3\transformed\graphics-shapes-release\res
+com.example.oe.app-espresso-contrib-3.7.0-20 C:\Users\BLyak\.gradle\caches\8.13\transforms\9646cc072dc399b2aa5571ad42f1d3d1\transformed\espresso-contrib-3.7.0\res
+com.example.oe.app-material-1.13.0-21 C:\Users\BLyak\.gradle\caches\8.13\transforms\9776fa3043800c21f7a2a760cfd29dcd\transformed\material-1.13.0\res
+com.example.oe.app-transition-1.5.0-22 C:\Users\BLyak\.gradle\caches\8.13\transforms\a13094e486948a9a9579d4ba5d98b99d\transformed\transition-1.5.0\res
+com.example.oe.app-constraintlayout-2.2.1-23 C:\Users\BLyak\.gradle\caches\8.13\transforms\a5ec8e7d8dd2c53e9d858498d92c5b92\transformed\constraintlayout-2.2.1\res
+com.example.oe.app-core-viewtree-1.0.0-24 C:\Users\BLyak\.gradle\caches\8.13\transforms\aa9129c94ed232b1917cfc3502fc8132\transformed\core-viewtree-1.0.0\res
+com.example.oe.app-room-runtime-2.6.1-25 C:\Users\BLyak\.gradle\caches\8.13\transforms\ac0107ad0e87c9efd969bf9354c99bcc\transformed\room-runtime-2.6.1\res
+com.example.oe.app-startup-runtime-1.1.1-26 C:\Users\BLyak\.gradle\caches\8.13\transforms\ae988c691dcded63f235e5ee01bcf982\transformed\startup-runtime-1.1.1\res
+com.example.oe.app-customview-poolingcontainer-1.0.0-27 C:\Users\BLyak\.gradle\caches\8.13\transforms\b00890e6b424a5c50790232c391da146\transformed\customview-poolingcontainer-1.0.0\res
+com.example.oe.app-appcompat-resources-1.7.1-28 C:\Users\BLyak\.gradle\caches\8.13\transforms\bafb62c2fc5da4ee1754edc762113054\transformed\appcompat-resources-1.7.1\res
+com.example.oe.app-activity-1.11.0-29 C:\Users\BLyak\.gradle\caches\8.13\transforms\c0d264de9d9d350ddf0f6ee6ffa2f5cd\transformed\activity-1.11.0\res
+com.example.oe.app-core-ktx-1.13.1-30 C:\Users\BLyak\.gradle\caches\8.13\transforms\c66ef24483ea05a419274ff9df7a454d\transformed\core-ktx-1.13.1\res
+com.example.oe.app-sqlite-2.4.0-31 C:\Users\BLyak\.gradle\caches\8.13\transforms\cd9c7a34f703efef1043a789e65b46d6\transformed\sqlite-2.4.0\res
+com.example.oe.app-recyclerview-1.4.0-32 C:\Users\BLyak\.gradle\caches\8.13\transforms\e8184258dc5509bc2bd2a18023a1045b\transformed\recyclerview-1.4.0\res
+com.example.oe.app-fragment-1.5.4-33 C:\Users\BLyak\.gradle\caches\8.13\transforms\e85387d8f75fb67e747a1ec9cfe2b1c0\transformed\fragment-1.5.4\res
+com.example.oe.app-lifecycle-viewmodel-2.6.2-34 C:\Users\BLyak\.gradle\caches\8.13\transforms\e98c44a2ec87c5e3fecac804cd714665\transformed\lifecycle-viewmodel-2.6.2\res
+com.example.oe.app-savedstate-1.2.1-35 C:\Users\BLyak\.gradle\caches\8.13\transforms\edba722ea903ae86d4ec389bef31e9df\transformed\savedstate-1.2.1\res
+com.example.oe.app-lifecycle-livedata-core-2.6.2-36 C:\Users\BLyak\.gradle\caches\8.13\transforms\f4b7585fed8ad6012686492a2f2c52c1\transformed\lifecycle-livedata-core-2.6.2\res
+com.example.oe.app-lifecycle-process-2.6.2-37 C:\Users\BLyak\.gradle\caches\8.13\transforms\f9f429495956532bc7900536d9481347\transformed\lifecycle-process-2.6.2\res
+com.example.oe.app-pngs-38 D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\build\generated\res\pngs\release
+com.example.oe.app-resValues-39 D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\build\generated\res\resValues\release
+com.example.oe.app-updated_navigation_xml-40 D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\build\generated\updated_navigation_xml\release
+com.example.oe.app-packageReleaseResources-41 D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.example.oe.app-packageReleaseResources-42 D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.example.oe.app-release-43 D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\build\intermediates\merged_res\release\mergeReleaseResources
+com.example.oe.app-main-44 D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\main\res
+com.example.oe.app-release-45 D:\WGU\WGU docs\D424 - Software Engineering Capstone\OE\app\src\release\res
